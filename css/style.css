@@ -111,6 +111,18 @@ body {
     margin-bottom: 0.5rem;
 }
 
+.card-selection {
+    display: flex;
+    align-items: flex-end;
+    gap: 0.5rem;
+    max-width: 34rem;
+}
+
+.card-picker {
+    flex: 1;
+    min-width: 0;
+}
+
 select {
     width: 100%;
     padding: 0.75rem;
@@ -198,11 +210,30 @@ select {
     content: 'Answer';
 }
 
-.flashcard p {
+.flashcard-term-id {
+    position: absolute;
+    right: 1rem;
+    bottom: 0.5rem;
+    max-width: calc(100% - 2rem);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    color: var(--primary-color);
+}
+
+.card-body {
     font-size: 1.25rem;
     margin: 1rem 0 0;
     text-align: center;
     width: 100%;
+}
+
+.card-body svg {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
 }
 
 .card-content {
@@ -357,7 +388,7 @@ select {
         gap: 1.5rem;
     }
     
-    .flashcard p {
+    .card-body {
         font-size: 1.5rem;
     }
     

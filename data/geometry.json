@@ -1,0 +1,32 @@
+{
+  "name": "Glossary3",
+  "description": "description test 1",
+  "searchContext": "serach-test-1",
+  "cards": [
+    {
+      "termID": "A-1",
+      "term": "before <svg width='80' height='40'><circle cx='20' cy='20' r='10'/></svg> after <svg width='80' height='40'><circle cx='20' cy='20' r='10'/></svg>",
+      "definition": "A file extension found in <svg width='80' height='40'><circle cx='20' cy='20' r='10'/></svg> Windows for an executable file"
+    },
+    {
+      "termID": "A-2",
+      "termFormat": "rich",
+      "term": "<p>How do you find the <strong>area</strong> of this triangle?</p><svg viewBox='0 0 160 100' width='160' height='100' role='img' aria-label='Right triangle with base b and height h'><polygon points='32,12 32,76 142,76' fill='none' stroke='currentColor' stroke-width='2'/><path d='M32 66 H42 V76' fill='none' stroke='currentColor'/><text x='86' y='94' text-anchor='middle' fill='currentColor'>b</text><text x='20' y='48' text-anchor='middle' fill='currentColor'>h</text></svg>",
+      "definitionFormat": "rich",
+      "definition": "<p>Multiply the base by the height, then divide by two.</p><math display='block' aria-label='A equals one half times b times h'><mi>A</mi><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mi>b</mi><mi>h</mi></math>"
+    },
+    {
+      "termID": "geometry-002",
+      "termFormat": "rich",
+      "term": "<p>What theorem can be used to prove <math aria-label='angle 1 is congruent to angle 2'><mo>∠</mo><mn>1</mn><mo>≅</mo><mo>∠</mo><mn>2</mn></math>?</p><svg viewBox='0 0 240 130' width='240' height='130' role='img' aria-label='Two parallel horizontal lines cut by a transversal. Angle 1 is below the top line and to the right of the transversal. Angle 2 is above the bottom line and to the left of the transversal.'><g fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M16 35 H224 M16 95 H224 M70 5 L170 125'/><path d='M44 30 L51 35 L44 40 M44 90 L51 95 L44 100'/><path d='M119 35 A24 24 0 0 1 110.36 53.44 M121 95 A24 24 0 0 1 129.64 76.56' stroke-width='1.5'/></g><text x='128' y='54' text-anchor='middle' fill='currentColor'>1</text><text x='112' y='86' text-anchor='middle' fill='currentColor'>2</text></svg>",
+      "definitionFormat": "rich",
+      "definition": "<p><strong>Alternate Interior Angles Theorem</strong></p><p>If two parallel lines are cut by a transversal, then each pair of alternate interior angles is congruent.</p>"
+    },
+    {
+      "termID": "geometry-003",
+      "termFormat": "rich",
+      "term": "<p>What allows us to say</p><p>If <math aria-label='angle 1 is congruent to angle 2'><mo>∠</mo><mn>1</mn><mo>≅</mo><mo>∠</mo><mn>2</mn></math></p><p>them<math aria-label='the measure of angle 1 equals the measure of angle 2'><mi>m</mi><mo>∠</mo><mn>1</mn><mo>=</mo><mi>m</mi><mo>∠</mo><mn>2</mn></math></p>?",
+      "definition": "Definition of congruent angles"
+    }
+  ]
+}

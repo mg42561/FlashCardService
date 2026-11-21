@@ -7,7 +7,8 @@ A simple, effective flashcard web application for focused studying and memorizat
 - Simple, clean interface for focused studying
 - Mobile-friendly design for studying anywhere
 - Light/Dark theme with system preference detection
-- Shuffled card order for better retention
+- Card picker with direct navigation by card number, ID, or question preview
+- Random and Linear study modes
 - Quick web search for more information
 - Keyboard navigation (arrow keys, space/enter to flip)
 - Track your progress with card counter
@@ -30,6 +31,7 @@ A simple, effective flashcard web application for focused studying and memorizat
      "searchContext": "Optional subject for web searches",
      "cards": [
        {
+         "termID": "my-deck-001",
          "term": "Question or term to study",
          "definition": "The answer or definition"
        },
@@ -42,6 +44,42 @@ A simple, effective flashcard web application for focused studying and memorizat
    ```
 
 3. Your new deck will automatically appear in the category dropdown
+
+The optional `termID` accepts a string or number and appears in the lower-right
+corner of both sides of the card.
+
+A `term` or `definition` can mix text and inline SVG diagrams. Use a
+`viewBox` to help each diagram scale and a `title` or `aria-label` to describe
+it. Explain More uses the question text and any diagram labels.
+
+```json
+{
+  "term": "Name this shape: <svg viewBox='0 0 80 40' width='80'><title>Round shape</title><circle cx='40' cy='20' r='15' fill='currentColor'/></svg>",
+  "definition": "A shape whose boundary is the same distance from its center."
+}
+```
+
+Diagrams support static shapes, paths, groups, and text labels. Malformed SVG
+and other card text display literally.
+
+### Rich card content
+
+Set `termFormat` or `definitionFormat` to `"rich"` to let that side mix basic
+HTML, SVG, and native MathML. Each flag is optional and applies only to its side.
+
+```json
+{
+  "term": "What is the area of a triangle?",
+  "definitionFormat": "rich",
+  "definition": "<p>Use the <strong>base</strong> and the perpendicular height.</p><math display='block'><mi>A</mi><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mi>b</mi><mi>h</mi></math>"
+}
+```
+
+Use basic HTML for paragraphs, emphasis, lists, code, subscripts, and
+superscripts. MathML supports common notation such as fractions, roots,
+subscripts, superscripts, and matrices. Omit `display='block'` to place a formula
+within a sentence. The Geometry deck includes a card with a labeled SVG
+triangle and a MathML answer.
 
 ## Running Locally
 
@@ -75,7 +113,7 @@ This is a static web app, so it can be hosted anywhere that serves HTML/CSS/JS:
 ## Tips for Effective Studying
 
 - Keep cards focused on one concept
-- Use the shuffle feature to test recall in different orders
+- Use Random to study a shuffled deck or Linear to follow the deck's original order
 - The "Explain More" button opens Bing for additional context
 - Study in short, frequent sessions for best retention
 

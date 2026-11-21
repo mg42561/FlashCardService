@@ -1,13 +1,17 @@
 // Import modules
 import Storage from './storage.js';
 import Favorites from './favorites.js';
+import { renderCardContent } from './card-content.js';
 
 // DOM Elements
 const flashcard = document.querySelector('.flashcard');
-const flashcardFront = document.querySelector('.flashcard-front p');
-const flashcardBack = document.querySelector('.flashcard-back p');
+const flashcardFront = document.querySelector('.flashcard-front .card-body');
+const flashcardBack = document.querySelector('.flashcard-back .card-body');
+const termIDLabels = flashcard.querySelectorAll('.flashcard-term-id');
 const cardCounter = document.getElementById('cardCounter');
 const categorySelect = document.getElementById('category');
+const cardSelect = document.getElementById('cardSelect');
+const orderToggle = document.getElementById('orderToggle');
 const clearFavoritesBtn = document.getElementById('clearFavoritesBtn');
 
 // Cache DOM elements with data-js attributes
@@ -24,12 +28,13 @@ const elements = {
 
 // State
 let currentDeck = [];
+let sourceDeck = [];
 let currentCardIndex = 0;
+let randomOrder = true;
+let categoryRequest = 0;
 let isFlipped = false;
 let data = {};
 let currentCategory = null;
-let cards = [];
-let favorites = [];
 
 // Initialize the app
 document.addEventListener('DOMContentLoaded', () => {
@@ -57,6 +62,19 @@ document.addEventListener('DOMContentLoaded', () => {
 function setupEventListeners() {
     // Category selection
     categorySelect?.addEventListener('change', handleCategoryChange);
+    cardSelect.addEventListener('change', () => {
+        const selectedCard = sourceDeck[Number(cardSelect.value)];
+        const index = currentDeck.indexOf(selectedCard);
+        if (index < 0) return;
+        currentCardIndex = index;
+        updateCardDisplay();
+    });
+    orderToggle.addEventListener('click', () => {
+        randomOrder = !randomOrder;
+        orderToggle.textContent = randomOrder ? 'Random' : 'Linear';
+        orderToggle.setAttribute('aria-pressed', String(randomOrder));
+        applyCardOrder(currentDeck[currentCardIndex]);
+    });
     
     // Navigation buttons
     elements.prevBtn?.addEventListener('click', showPreviousCard);
@@ -87,10 +105,11 @@ function loadCategories() {
     }
     
     // Add regular categories
-    const categories = [
-        { value: 'technicalSupportFundamentals', label: 'Technical Support Fundamentals' },
-        { value: 'bitsAndBytesComputerNetworking', label: 'Bits and Bytes Computer Networking' }
-    ];
+const categories = [
+    { value: 'technicalSupportFundamentals', label: 'Technical Support Fundamentals' },
+    { value: 'bitsAndBytesComputerNetworking', label: 'Bits and Bytes Computer Networking' },
+    { value: 'geometry', label: 'Geometry' }
+];
     
     categories.forEach(cat => {
         const option = new Option(cat.label, cat.value);
@@ -129,76 +148,84 @@ function updateClearFavoritesButton() {
 // Handle category change
 function handleCategoryChange(e) {
     const category = e.target.value;
+    const request = ++categoryRequest;
     currentCategory = category;
-    currentCardIndex = 0;
+    data = {};
     
     // Update favorites button visibility based on selected category
     updateClearFavoritesButton();
     
     if (category === 'favorites') {
         loadFavorites();
-    } else if (category) {
-        loadCategory(category);
     } else {
-        // No category selected
-        currentDeck = [];
-        updateCardDisplay();
+        setDeck([]);
+        if (category) loadCategory(category, request);
     }
 }
 
 // Load favorites
 function loadFavorites() {
     const favsByCategory = Favorites.getFavoritesByCategory();
-    currentDeck = [];
-    
-    // Combine all favorites into one array
-    for (const [category, favs] of Object.entries(favsByCategory)) {
-        currentDeck.push(...favs.map(card => ({
-            ...card,
-            category
-        })));
-    }
-    
-    updateCardDisplay();
-    updateClearFavoritesButton();
-    
-    // Update UI based on the first card
-    if (currentDeck.length > 0) {
-        const isFavorite = Favorites.isFavorite(currentDeck[0].term);
-        updateFavoriteButton();
-    }
+    setDeck(Object.values(favsByCategory).flat());
 }
 
 // Load category
-async function loadCategory(category) {
+async function loadCategory(category, request) {
     try {
         const response = await fetch(`data/${category}.json`);
         if (!response.ok) throw new Error('Failed to load category');
         
-        data = await response.json();
-        
-        currentDeck = shuffleArray([...data.cards]);
-        currentCardIndex = 0;
-        isFlipped = false;
-        
-        updateCardDisplay();
-        updateNavigationButtons();
-        elements.explainMoreBtn.style.display = 'inline-block';
-        elements.flipBtn.disabled = false;
-        
-        // Reset card to front when changing categories
-        if (flashcard.classList.contains('flipped')) {
-            flashcard.classList.remove('flipped');
-        }
+        const deck = await response.json();
+        if (request !== categoryRequest) return;
+        data = deck;
+        setDeck(deck.cards);
     } catch (error) {
+        if (request !== categoryRequest) return;
         console.error('Error loading category:', error);
         alert('Failed to load the selected category. Please try again.');
     }
 }
 
+function setDeck(cards) {
+    sourceDeck = cards;
+    const preview = document.createElement('div');
+    const options = cards.map((card, index) => {
+        const id = String(card.termID ?? '').trim();
+        const term = renderCardContent(preview, card.term, card.termFormat) || '';
+        const summary = term.replace(/\s+/g, ' ').trim();
+        const label = [id, summary.length > 80 ? summary.slice(0, 79) + '…' : summary]
+            .filter(Boolean).join(' — ');
+        return new Option(label ? `${index + 1}. ${label}` : `Card ${index + 1}`, String(index));
+    });
+    cardSelect.replaceChildren(...(options.length ? options : [new Option('No cards available', '')]));
+    cardSelect.disabled = !options.length;
+    applyCardOrder();
+}
+
+function applyCardOrder(selectedCard) {
+    currentDeck = randomOrder ? shuffleArray(sourceDeck) : sourceDeck;
+    currentCardIndex = Math.max(0, currentDeck.indexOf(selectedCard));
+    updateCardDisplay();
+}
+
 // Update card display
 function updateCardDisplay() {
-    if (currentDeck.length === 0) {
+    const currentCard = currentDeck[currentCardIndex];
+    cardSelect.value = currentCard ? String(sourceDeck.indexOf(currentCard)) : '';
+    cardCounter.textContent = currentCard ? `${currentCardIndex + 1}/${currentDeck.length}` : '0/0';
+    elements.prevBtn.disabled = currentCardIndex === 0;
+    elements.nextBtn.disabled = currentCardIndex >= currentDeck.length - 1;
+    resetCardState();
+    const termID = currentCard?.termID;
+    const idText = typeof termID === 'string' || typeof termID === 'number'
+        ? String(termID).trim()
+        : '';
+    for (const label of termIDLabels) {
+        label.textContent = idText;
+        label.hidden = !idText;
+    }
+
+    if (!currentCard) {
         // Handle empty state
         flashcardFront.textContent = 'No cards available';
         flashcardBack.textContent = 'Select a category to begin';
@@ -208,34 +235,23 @@ function updateCardDisplay() {
         return;
     }
     
-    const currentCard = currentDeck[currentCardIndex];
-    flashcardFront.textContent = currentCard.term;
-    flashcardBack.textContent = currentCard.definition;
+    const searchTerm = renderCardContent(flashcardFront, currentCard.term, currentCard.termFormat);
+    renderCardContent(flashcardBack, currentCard.definition, currentCard.definitionFormat);
     
-    // Update card counter
-    cardCounter.textContent = `${currentCardIndex + 1}/${currentDeck.length}`;
-    
-    // Update navigation buttons
-    elements.prevBtn.disabled = currentCardIndex === 0;
-    elements.nextBtn.disabled = currentCardIndex === currentDeck.length - 1;
     elements.flipBtn.disabled = false;
     
     // Update explain more link
-    updateExplainMoreLink(currentCard);
+    updateExplainMoreLink(searchTerm);
+    elements.explainMoreBtn.style.display = 'inline-block';
     
     // Update favorite button
     updateFavoriteButton();
     
-    // Reset card to front if it was flipped
-    if (isFlipped) {
-        flashcard.classList.remove('flipped');
-        isFlipped = false;
-    }
 }
 
 // Update explain more link
-function updateExplainMoreLink(currentCard) {
-    const searchTerm = currentCard.term.replace('?', '');
+function updateExplainMoreLink(term) {
+    const searchTerm = term.replace('?', '');
     const searchContext = data.searchContext ? ` ${data.searchContext}` : '';
     elements.explainMoreBtn.href = `https://copilot.microsoft.com/?q=${encodeURIComponent(searchTerm + searchContext)}`;
     elements.explainMoreBtn.target = '_blank';
@@ -271,26 +287,17 @@ function updateFavoriteButton() {
 
 // Navigation functions
 function showNextCard() {
-    resetCardState();
     if (currentCardIndex < currentDeck.length - 1) {
         currentCardIndex++;
         updateCardDisplay();
-        updateNavigationButtons();
     }
 }
 
 function showPreviousCard() {
-    resetCardState();
     if (currentCardIndex > 0) {
         currentCardIndex--;
         updateCardDisplay();
-        updateNavigationButtons();
     }
-}
-
-function updateNavigationButtons() {
-    elements.prevBtn.disabled = currentCardIndex === 0;
-    elements.nextBtn.disabled = currentCardIndex === currentDeck.length - 1;
 }
 
 // Toggle card flip
@@ -302,7 +309,7 @@ function toggleCard() {
 
 // Handle keyboard navigation
 function handleKeyDown(event) {
-    if (currentDeck.length === 0) return;
+    if (currentDeck.length === 0 || event.target.closest('select, input, textarea, button, a')) return;
     
     switch(event.key) {
         case 'ArrowLeft':
@@ -369,17 +376,8 @@ function handleClearFavorites() {
         
         // If currently viewing favorites, reset to first category
         if (currentCategory === 'favorites') {
-            // Reset to first non-default option if available
-            if (elements.categorySelect.options.length > 1) {
-                elements.categorySelect.selectedIndex = 1;
-                currentCategory = elements.categorySelect.value;
-                loadCategory(currentCategory);
-            } else {
-                // No categories available, reset to initial state
-                currentDeck = [];
-                currentCardIndex = 0;
-                updateCardDisplay();
-            }
+            categorySelect.selectedIndex = categorySelect.options.length > 1 ? 1 : 0;
+            categorySelect.dispatchEvent(new Event('change'));
         } else {
             // Just update the UI to reflect the change
             updateFavoritesOption();

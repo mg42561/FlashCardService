@@ -29,7 +29,18 @@
                     <option value="">-- Select a category --</option>
                     <option value="technicalSupportFundamentals">Technical Support Fundamentals</option>
                     <option value="bitsAndBytesComputerNetworking">Bits and Bytes Computer Networking</option>
+                    <option value="geometry">test-1</option>
                 </select>
+            </div>
+
+            <div class="category-selector card-selection">
+                <div class="card-picker">
+                    <label for="cardSelect">Select Card</label>
+                    <select id="cardSelect" disabled>
+                        <option value="">No cards available</option>
+                    </select>
+                </div>
+                <button id="orderToggle" type="button" class="btn-base" aria-label="Random card order" aria-pressed="true">Random</button>
             </div>
 
             <div class="flashcard-container">
@@ -38,14 +49,16 @@
                         <div class="flashcard-front">
                             <span class="flashcard-side-label"></span>
                             <div class="card-content">
-                                <p>Select a category to begin</p>
+                                <div class="card-body">Select a category to begin</div>
                             </div>
+                            <span class="flashcard-term-id" hidden></span>
                         </div>
                         <div class="flashcard-back">
                             <span class="flashcard-side-label"></span>
                             <div class="card-content">
-                                <p>Your flashcard answer will appear here</p>
+                                <div class="card-body">Your flashcard answer will appear here</div>
                             </div>
+                            <span class="flashcard-term-id" hidden></span>
                         </div>
                     </div>
                 </div>

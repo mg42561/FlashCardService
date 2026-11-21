@@ -38,7 +38,10 @@ const Storage = {
             favorites.push({ 
                 category, 
                 term: card.term, 
-                definition: card.definition 
+                definition: card.definition,
+                termID: card.termID,
+                termFormat: card.termFormat,
+                definitionFormat: card.definitionFormat
             });
             this.saveFavorites(favorites);
         }
@@ -74,7 +77,10 @@ const Storage = {
             if (!acc[fav.category]) acc[fav.category] = [];
             acc[fav.category].push({
                 term: fav.term,
-                definition: fav.definition
+                definition: fav.definition,
+                termID: fav.termID,
+                termFormat: fav.termFormat,
+                definitionFormat: fav.definitionFormat
             });
             return acc;
         }, {});
