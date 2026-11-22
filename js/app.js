@@ -2,6 +2,11 @@
 import Storage from './storage.js';
 import Favorites from './favorites.js';
 import { renderCardContent } from './card-content.js';
+import { appShell } from './app-shell.js';
+
+document.body.insertAdjacentHTML('afterbegin', appShell);
+const configuredDeck = document.body.dataset.deck;
+const appHeading = document.querySelector('.app-header h1');
 
 // DOM Elements
 const flashcard = document.querySelector('.flashcard');
@@ -12,16 +17,14 @@ const cardCounter = document.getElementById('cardCounter');
 const categorySelect = document.getElementById('category');
 const cardSelect = document.getElementById('cardSelect');
 const orderToggle = document.getElementById('orderToggle');
+const viewDeckBtn = document.getElementById('viewDeckBtn');
 const clearFavoritesBtn = document.getElementById('clearFavoritesBtn');
 
 // Cache DOM elements with data-js attributes
 const elements = {
   prevBtn: document.querySelector('[data-js="nav-prev"]'),
   nextBtn: document.querySelector('[data-js="nav-next"]'),
-  flipBtn: document.querySelector('[data-js="flip-btn"]'),
-  explainMoreBtn: document.querySelector('[data-js="explain-btn"]'),
   themeToggle: document.querySelector('[data-js="theme-toggle"]'),
-  favoriteBtn: document.getElementById('favoriteBtn'),
   clearFavoritesBtn: clearFavoritesBtn,
   categorySelect: categorySelect
 };
@@ -33,7 +36,7 @@ let currentCardIndex = 0;
 let randomOrder = true;
 let categoryRequest = 0;
 let isFlipped = false;
-let data = {};
+let deckName = '';
 let currentCategory = null;
 
 // Initialize the app
@@ -45,6 +48,15 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Set up event listeners
     setupEventListeners();
+
+    if (configuredDeck) {
+        categorySelect.closest('.category-selector').hidden = true;
+        deckName = document.title;
+        appHeading.textContent = deckName;
+        flashcardFront.textContent = 'Loading cards…';
+        loadCategory(configuredDeck, ++categoryRequest);
+        return;
+    }
     
     // Load available categories
     loadCategories();
@@ -82,16 +94,13 @@ function setupEventListeners() {
     
     // Card interaction
     flashcard?.addEventListener('click', toggleCard);
-    elements.flipBtn?.addEventListener('click', toggleCard);
+    viewDeckBtn.addEventListener('click', openDeckView);
     
     // Keyboard navigation
     document.addEventListener('keydown', handleKeyDown);
     
     // Theme toggle
     elements.themeToggle?.addEventListener('click', toggleTheme);
-    
-    // Favorites button
-    elements.favoriteBtn.addEventListener('click', handleFavoriteClick);
     
     // Clear favorites button
     elements.clearFavoritesBtn.addEventListener('click', handleClearFavorites);
@@ -150,7 +159,7 @@ function handleCategoryChange(e) {
     const category = e.target.value;
     const request = ++categoryRequest;
     currentCategory = category;
-    data = {};
+    deckName = categorySelect.selectedOptions[0]?.textContent || 'Flashcards';
     
     // Update favorites button visibility based on selected category
     updateClearFavoritesButton();
@@ -159,7 +168,7 @@ function handleCategoryChange(e) {
         loadFavorites();
     } else {
         setDeck([]);
-        if (category) loadCategory(category, request);
+        if (category) loadCategory(`data/${category}.json`, request);
     }
 }
 
@@ -170,32 +179,36 @@ function loadFavorites() {
 }
 
 // Load category
-async function loadCategory(category, request) {
+async function loadCategory(deckPath, request) {
     try {
-        const response = await fetch(`data/${category}.json`);
+        const response = await fetch(deckPath);
         if (!response.ok) throw new Error('Failed to load category');
         
         const deck = await response.json();
         if (request !== categoryRequest) return;
-        data = deck;
+        deckName = deck.name || deckName;
+        if (configuredDeck) {
+            appHeading.textContent = deckName;
+            document.title = deckName;
+        }
         setDeck(deck.cards);
     } catch (error) {
         if (request !== categoryRequest) return;
         console.error('Error loading category:', error);
+        if (configuredDeck) {
+            flashcardFront.textContent = 'Could not load the deck.';
+            return;
+        }
         alert('Failed to load the selected category. Please try again.');
     }
 }
 
 function setDeck(cards) {
     sourceDeck = cards;
-    const preview = document.createElement('div');
+    viewDeckBtn.disabled = !cards.length;
     const options = cards.map((card, index) => {
         const id = String(card.termID ?? '').trim();
-        const term = renderCardContent(preview, card.term, card.termFormat) || '';
-        const summary = term.replace(/\s+/g, ' ').trim();
-        const label = [id, summary.length > 80 ? summary.slice(0, 79) + '…' : summary]
-            .filter(Boolean).join(' — ');
-        return new Option(label ? `${index + 1}. ${label}` : `Card ${index + 1}`, String(index));
+        return new Option(id || `Card ${index + 1}`, String(index));
     });
     cardSelect.replaceChildren(...(options.length ? options : [new Option('No cards available', '')]));
     cardSelect.disabled = !options.length;
@@ -229,60 +242,67 @@ function updateCardDisplay() {
         // Handle empty state
         flashcardFront.textContent = 'No cards available';
         flashcardBack.textContent = 'Select a category to begin';
-        elements.flipBtn.disabled = true;
-        elements.explainMoreBtn.style.display = 'none';
-        elements.favoriteBtn.style.display = 'none';
         return;
     }
     
-    const searchTerm = renderCardContent(flashcardFront, currentCard.term, currentCard.termFormat);
+    renderCardContent(flashcardFront, currentCard.term, currentCard.termFormat);
     renderCardContent(flashcardBack, currentCard.definition, currentCard.definitionFormat);
-    
-    elements.flipBtn.disabled = false;
-    
-    // Update explain more link
-    updateExplainMoreLink(searchTerm);
-    elements.explainMoreBtn.style.display = 'inline-block';
-    
-    // Update favorite button
-    updateFavoriteButton();
-    
 }
 
-// Update explain more link
-function updateExplainMoreLink(term) {
-    const searchTerm = term.replace('?', '');
-    const searchContext = data.searchContext ? ` ${data.searchContext}` : '';
-    elements.explainMoreBtn.href = `https://copilot.microsoft.com/?q=${encodeURIComponent(searchTerm + searchContext)}`;
-    elements.explainMoreBtn.target = '_blank';
-    elements.explainMoreBtn.rel = 'noopener noreferrer';
-}
-
-// Handle favorite button click
-function handleFavoriteClick() {
-    if (!currentCategory || currentCategory === 'favorites' || !currentDeck[currentCardIndex]) return;
-    
-    const card = currentDeck[currentCardIndex];
-    Favorites.addFavorite(currentCategory, card);
-    
-    // Update UI
-    updateFavoriteButton();
-    
-    // Update favorites option in dropdown if needed
-    updateFavoritesOption();
-}
-
-// Update favorite button state
-function updateFavoriteButton() {
-    if (!elements.favoriteBtn) return;
-    
-    // Hide the button in Favorites view
-    if (currentCategory === 'favorites' || !currentDeck.length) {
-        elements.favoriteBtn.style.display = 'none';
-    } else {
-        elements.favoriteBtn.style.display = 'block';
-        elements.favoriteBtn.textContent = 'Add to Favorites';
+function openDeckView() {
+    const popup = window.open('', '_blank', 'popup,width=1100,height=800');
+    if (!popup) {
+        alert('Allow pop-ups for this site to open the deck view.');
+        return;
     }
+    popup.opener = null;
+
+    const view = popup.document;
+    view.title = deckName;
+    view.documentElement.lang = document.documentElement.lang || 'en';
+    view.documentElement.dataset.theme = document.documentElement.dataset.theme;
+    const viewport = view.createElement('meta');
+    viewport.name = 'viewport';
+    viewport.content = 'width=device-width, initial-scale=1';
+    const stylesheet = view.createElement('link');
+    stylesheet.rel = 'stylesheet';
+    stylesheet.href = new URL('css/style.css', document.baseURI).href;
+    view.head.append(viewport, stylesheet);
+
+    const main = view.createElement('main');
+    main.className = 'deck-view';
+    const heading = view.createElement('h1');
+    heading.textContent = deckName;
+
+    const table = view.createElement('table');
+    table.setAttribute('aria-label', deckName);
+    const header = table.createTHead().insertRow();
+    for (const column of ['Question', 'Answer']) {
+        const cell = view.createElement('th');
+        cell.scope = 'col';
+        cell.textContent = column;
+        header.append(cell);
+    }
+
+    const rows = table.createTBody();
+    for (const card of sourceDeck) {
+        const row = rows.insertRow();
+        const question = row.insertCell();
+        const answer = row.insertCell();
+        const termID = String(card.termID ?? '').trim();
+        if (termID) {
+            const id = view.createElement('div');
+            id.className = 'deck-view-term-id';
+            id.textContent = termID;
+            question.append(id);
+        }
+        const term = view.createElement('div');
+        renderCardContent(term, card.term, card.termFormat);
+        question.append(term);
+        renderCardContent(answer, card.definition, card.definitionFormat);
+    }
+    main.append(heading, table);
+    view.body.append(main);
 }
 
 // Navigation functions
@@ -383,9 +403,5 @@ function handleClearFavorites() {
             updateFavoritesOption();
         }
         
-        // Update favorite button state if needed
-        if (currentDeck.length > 0) {
-            updateFavoriteButton();
-        }
     }
 }

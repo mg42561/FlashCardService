@@ -106,6 +106,10 @@ body {
     margin: 0.5rem auto;
 }
 
+.category-selector[hidden] {
+    display: none;
+}
+
 .category-selector label {
     display: inline-block;
     margin-bottom: 0.5rem;
@@ -332,10 +336,6 @@ select {
     min-width: 6rem;
 }
 
-[data-js="explain-btn"] {
-    text-decoration: none;
-}
-
 /* Icon Button */
 .btn-icon {
     width: 2.5rem;
@@ -351,8 +351,68 @@ select {
     background-color: var(--border-color);
 }
 
-#favoriteBtn {
-    /* No special styles needed - it will inherit from .btn-base */
+.mode-control {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+
+.deck-view {
+    max-width: 72rem;
+    margin: 0 auto;
+    padding: clamp(0.75rem, 3vw, 2rem);
+}
+
+.deck-view h1 {
+    margin-bottom: 1rem;
+}
+
+.deck-view table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+
+.deck-view th,
+.deck-view td {
+    padding: clamp(0.5rem, 2vw, 1rem);
+    border: 1px solid var(--border-color);
+    text-align: left;
+    vertical-align: top;
+    overflow-wrap: anywhere;
+}
+
+.deck-view th {
+    background-color: var(--button-bg);
+    color: var(--button-text);
+}
+
+.deck-view td {
+    background-color: var(--card-bg);
+}
+
+.deck-view p + p {
+    margin-top: 0.5rem;
+}
+
+.deck-view svg {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin-top: 0.5rem;
+}
+
+.deck-view td {
+    overflow: auto;
+}
+
+.deck-view-term-id {
+    margin-bottom: 0.4rem;
+    color: var(--text-secondary);
+    font-family: ui-monospace, monospace;
+    font-size: 0.8rem;
 }
 
 /* Tablet and larger devices (768px and up) */
