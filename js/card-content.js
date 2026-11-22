@@ -91,6 +91,9 @@ function appendRichContent(target, source) {
             target.append(math);
         } else if (!inMath && namespaceURI === htmlNamespace && richTextElements.has(localName)) {
             const element = document.createElement(localName);
+            if (localName === 'div' && child.classList.contains('card-diagram-layout')) {
+                element.className = 'card-diagram-layout';
+            }
             appendRichContent(element, child);
             target.append(element);
         }

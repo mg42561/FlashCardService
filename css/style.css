@@ -45,9 +45,11 @@ body {
 }
 
 .app-container {
-    max-width: 1200px;
+    --flashcard-max-width: 1200px;
+    --app-padding: 1rem;
+    max-width: calc(var(--flashcard-max-width) + 2 * var(--app-padding));
     margin: 0 auto;
-    padding: 1rem;
+    padding: var(--app-padding);
     width: 100%;
 }
 
@@ -141,7 +143,7 @@ select {
 .flashcard-container {
     perspective: 1000px;
     width: 100%;
-    max-width: 600px;
+    max-width: var(--flashcard-max-width);
     height: 250px;
     margin: 0.5rem auto;
 }
@@ -238,6 +240,26 @@ select {
     max-width: 100%;
     height: auto;
     vertical-align: middle;
+}
+
+.card-diagram-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+    align-items: center;
+    gap: clamp(0.5rem, 2vw, 1.25rem);
+    overflow-wrap: anywhere;
+    text-align: left;
+}
+
+.card-diagram-layout svg {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.card-diagram-layout p + p {
+    margin-top: 0.4em;
 }
 
 .card-content {
@@ -413,6 +435,16 @@ select {
     color: var(--text-secondary);
     font-family: ui-monospace, monospace;
     font-size: 0.8rem;
+}
+
+@media print {
+    .deck-view tbody > tr:nth-child(4n + 5) {
+        break-before: page;
+    }
+
+    .deck-view tbody > tr {
+        break-inside: avoid;
+    }
 }
 
 /* Tablet and larger devices (768px and up) */
