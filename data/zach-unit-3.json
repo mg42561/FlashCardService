@@ -1,0 +1,455 @@
+{
+  "name": "Zach Geometry: Unit 2 Proofs",
+  "description": "Unit 2 Parts 1 and 2 with Unit 1 facts used in proofs.",
+  "searchContext": "geometry proofs segments angles parallel lines triangle angle sum",
+  "cards": [
+    {
+      "termID": "zach-u3-two-column-proof",
+      "termFormat": "rich",
+      "term": "<p>What goes in each column of a two-column proof?</p>",
+      "definitionFormat": "rich",
+      "definition": "<p>The left column lists <strong>statements</strong>. The right column gives a <strong>reason</strong> for each statement, such as Given, a definition, a property, a postulate, or a theorem.</p>"
+    },
+    {
+      "termID": "zach-u3-given-prove",
+      "termFormat": "rich",
+      "term": "<p>How do you use the Given and Prove in a proof?</p>",
+      "definitionFormat": "rich",
+      "definition": "<p>Start from the given information. Justify each new step and finish with the statement you are asked to prove.</p>"
+    },
+    {
+      "termID": "zach-u3-addition-equality",
+      "termFormat": "rich",
+      "term": "<p>What is the Addition Property of Equality?</p>",
+      "definitionFormat": "rich",
+      "definition": "<p>Add the same quantity to both sides.</p><p>If <math aria-label=\"a=b\"><mrow><mi>a</mi><mo>=</mo><mi>b</mi></mrow></math>, then <math aria-label=\"a+c=b+c\"><mrow><mi>a</mi><mo>+</mo><mi>c</mi><mo>=</mo><mi>b</mi><mo>+</mo><mi>c</mi></mrow></math>.</p>"
+    },
+    {
+      "termID": "zach-u3-subtraction-equality",
+      "termFormat": "rich",
+      "term": "<p>What is the Subtraction Property of Equality?</p>",
+      "definitionFormat": "rich",
+      "definition": "<p>Subtract the same quantity from both sides.</p><p>If <math aria-label=\"a=b\"><mrow><mi>a</mi><mo>=</mo><mi>b</mi></mrow></math>, then <math aria-label=\"a−c=b−c\"><mrow><mi>a</mi><mo>−</mo><mi>c</mi><mo>=</mo><mi>b</mi><mo>−</mo><mi>c</mi></mrow></math>.</p>"
+    },
+    {
+      "termID": "zach-u3-multiplication-equality",
+      "termFormat": "rich",
+      "term": "<p>What is the Multiplication Property of Equality?</p>",
+      "definitionFormat": "rich",
+      "definition": "<p>Multiply both sides by the same quantity.</p><p>If <math aria-label=\"a=b\"><mrow><mi>a</mi><mo>=</mo><mi>b</mi></mrow></math>, then <math aria-label=\"ac=bc\"><mrow><mi>a</mi><mi>c</mi><mo>=</mo><mi>b</mi><mi>c</mi></mrow></math>.</p>"
+    },
+    {
+      "termID": "zach-u3-division-equality",
+      "termFormat": "rich",
+      "term": "<p>What is the Division Property of Equality?</p>",
+      "definitionFormat": "rich",
+      "definition": "<p>Divide both sides by the same nonzero quantity.</p><p>If <math aria-label=\"a=b\"><mrow><mi>a</mi><mo>=</mo><mi>b</mi></mrow></math> and <math aria-label=\"c≠0\"><mrow><mi>c</mi><mo>≠</mo><mn>0</mn></mrow></math>, then <math aria-label=\"a÷c=b÷c\"><mrow><mi>a</mi><mo>÷</mo><mi>c</mi><mo>=</mo><mi>b</mi><mo>÷</mo><mi>c</mi></mrow></math>.</p>"
+    },
+    {
+      "termID": "zach-u3-reflexive-equality",
+      "termFormat": "rich",
+      "term": "<p>What is the Reflexive Property of Equality?</p>",
+      "definitionFormat": "rich",
+      "definition": "<p>A quantity equals itself.</p><p><math aria-label=\"a=a\"><mrow><mi>a</mi><mo>=</mo><mi>a</mi></mrow></math>.</p>"
+    },
+    {
+      "termID": "zach-u3-symmetric-equality",
+      "termFormat": "rich",
+      "term": "<p>What is the Symmetric Property of Equality?</p>",
+      "definitionFormat": "rich",
+      "definition": "<p>You can reverse the order of an equality.</p><p>If <math aria-label=\"a=b\"><mrow><mi>a</mi><mo>=</mo><mi>b</mi></mrow></math>, then <math aria-label=\"b=a\"><mrow><mi>b</mi><mo>=</mo><mi>a</mi></mrow></math>.</p>"
+    },
+    {
+      "termID": "zach-u3-transitive-equality",
+      "termFormat": "rich",
+      "term": "<p>What is the Transitive Property of Equality?</p>",
+      "definitionFormat": "rich",
+      "definition": "<p>Two quantities equal to the same quantity are equal to each other.</p><p>If <math aria-label=\"a=b\"><mrow><mi>a</mi><mo>=</mo><mi>b</mi></mrow></math> and <math aria-label=\"b=c\"><mrow><mi>b</mi><mo>=</mo><mi>c</mi></mrow></math>, then <math aria-label=\"a=c\"><mrow><mi>a</mi><mo>=</mo><mi>c</mi></mrow></math>.</p>"
+    },
+    {
+      "termID": "zach-u3-substitution",
+      "termFormat": "rich",
+      "term": "<p>What is the Substitution Property of Equality?</p>",
+      "definitionFormat": "rich",
+      "definition": "<p>If two quantities are equal, either can replace the other in an expression or equation. If <math aria-label=\"AB=5\"><mrow><mi>A</mi><mi>B</mi><mo>=</mo><mn>5</mn></mrow></math>, substitution changes <math aria-label=\"AB+BC=AC\"><mrow><mi>A</mi><mi>B</mi><mo>+</mo><mi>B</mi><mi>C</mi><mo>=</mo><mi>A</mi><mi>C</mi></mrow></math> to <math aria-label=\"5+BC=AC\"><mrow><mn>5</mn><mo>+</mo><mi>B</mi><mi>C</mi><mo>=</mo><mi>A</mi><mi>C</mi></mrow></math>.</p>"
+    },
+    {
+      "termID": "zach-u3-distribution",
+      "termFormat": "rich",
+      "term": "<p>What is the Distributive Property?</p>",
+      "definitionFormat": "rich",
+      "definition": "<p>Multiply the outside factor by each term in parentheses. <math aria-label=\"a(b+c)=ab+ac\"><mrow><mi>a</mi><mo>(</mo><mi>b</mi><mo>+</mo><mi>c</mi><mo>)</mo><mo>=</mo><mi>a</mi><mi>b</mi><mo>+</mo><mi>a</mi><mi>c</mi></mrow></math>. For subtraction, <math aria-label=\"a(b−c)=ab−ac\"><mrow><mi>a</mi><mo>(</mo><mi>b</mi><mo>−</mo><mi>c</mi><mo>)</mo><mo>=</mo><mi>a</mi><mi>b</mi><mo>−</mo><mi>a</mi><mi>c</mi></mrow></math>.</p>"
+    },
+    {
+      "termID": "zach-u3-simplify",
+      "termFormat": "rich",
+      "term": "<p>What does “Simplify” justify in an algebraic proof?</p>",
+      "definitionFormat": "rich",
+      "definition": "<p>It justifies rewriting an expression in an equivalent form, such as combining like terms: <math aria-label=\"3x+2x=5x\"><mrow><mn>3</mn><mi>x</mi><mo>+</mo><mn>2</mn><mi>x</mi><mo>=</mo><mn>5</mn><mi>x</mi></mrow></math>.</p>"
+    },
+    {
+      "termID": "zach-u3-square-root",
+      "termFormat": "rich",
+      "term": "<p>How do you solve an equation of the form x² = k when k is positive?</p>",
+      "definitionFormat": "rich",
+      "definition": "<p>Use both square roots. For example, <math aria-label=\"x²=16\"><mrow><mi>x</mi><mo>²</mo><mo>=</mo><mn>16</mn></mrow></math> gives <math aria-label=\"x=4\"><mrow><mi>x</mi><mo>=</mo><mn>4</mn></mrow></math> or <math aria-label=\"x=−4\"><mrow><mi>x</mi><mo>=</mo><mo>−</mo><mn>4</mn></mrow></math>.</p>"
+    },
+    {
+      "termID": "zach-u3-reflexive-congruence",
+      "termFormat": "rich",
+      "term": "<p>What is the Reflexive Property of Congruence?</p>",
+      "definitionFormat": "rich",
+      "definition": "<p>Every segment or angle is congruent to itself.</p><p><math aria-label=\"∠A≅∠A\"><mrow><mo>∠</mo><mi>A</mi><mo>≅</mo><mo>∠</mo><mi>A</mi></mrow></math>.</p>"
+    },
+    {
+      "termID": "zach-u3-symmetric-congruence",
+      "termFormat": "rich",
+      "term": "<p>What is the Symmetric Property of Congruence?</p>",
+      "definitionFormat": "rich",
+      "definition": "<p>You can reverse a congruence statement.</p><p>If <math aria-label=\"∠A≅∠B\"><mrow><mo>∠</mo><mi>A</mi><mo>≅</mo><mo>∠</mo><mi>B</mi></mrow></math>, then <math aria-label=\"∠B≅∠A\"><mrow><mo>∠</mo><mi>B</mi><mo>≅</mo><mo>∠</mo><mi>A</mi></mrow></math>.</p>"
+    },
+    {
+      "termID": "zach-u3-transitive-congruence",
+      "termFormat": "rich",
+      "term": "<p>What is the Transitive Property of Congruence?</p>",
+      "definitionFormat": "rich",
+      "definition": "<p>If two figures are each congruent to a third figure, they are congruent to each other.</p><p>If <math aria-label=\"∠A≅∠B\"><mrow><mo>∠</mo><mi>A</mi><mo>≅</mo><mo>∠</mo><mi>B</mi></mrow></math> and <math aria-label=\"∠B≅∠C\"><mrow><mo>∠</mo><mi>B</mi><mo>≅</mo><mo>∠</mo><mi>C</mi></mrow></math>, then <math aria-label=\"∠A≅∠C\"><mrow><mo>∠</mo><mi>A</mi><mo>≅</mo><mo>∠</mo><mi>C</mi></mrow></math>.</p>"
+    },
+    {
+      "termID": "zach-u3-collinear-between",
+      "termFormat": "rich",
+      "term": "<p>What does it mean for B to be between A and C?</p>",
+      "definitionFormat": "rich",
+      "definition": "<p>A, B, and C are distinct points on the same line, and B lies inside segment AC. Points on the same line are <strong>collinear</strong>.</p><svg viewBox=\"0 0 260 132\" width=\"260\" height=\"132\" role=\"img\" aria-label=\"Segment AC with B between A and C.\"><rect x=\"1\" y=\"1\" width=\"258\" height=\"130\" rx=\"12\" fill=\"#477fe0\" fill-opacity=\".08\"/><path d=\"M42 62H218\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><circle cx=\"42\" cy=\"62\" r=\"3\" fill=\"#477fe0\"/><circle cx=\"111\" cy=\"62\" r=\"3\" fill=\"#477fe0\"/><circle cx=\"218\" cy=\"62\" r=\"3\" fill=\"#477fe0\"/><text x=\"42\" y=\"84\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">A</text><text x=\"111\" y=\"84\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">B</text><text x=\"218\" y=\"84\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">C</text></svg>"
+    },
+    {
+      "termID": "zach-u3-segment-congruence",
+      "termFormat": "rich",
+      "term": "<p>What does it mean for segments to be congruent?</p>",
+      "definitionFormat": "rich",
+      "definition": "<p>Segments are congruent exactly when their lengths are equal. On a diagram, matching tick marks indicate congruence. If segments AB and BC are congruent, then <math aria-label=\"AB=BC\"><mrow><mi>A</mi><mi>B</mi><mo>=</mo><mi>B</mi><mi>C</mi></mrow></math>, and the converse holds.</p><svg viewBox=\"0 0 260 132\" width=\"260\" height=\"132\" role=\"img\" aria-label=\"Segment AC with midpoint B. Matching tick marks show equal halves.\"><rect x=\"1\" y=\"1\" width=\"258\" height=\"130\" rx=\"12\" fill=\"#477fe0\" fill-opacity=\".08\"/><path d=\"M42 62H218\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><circle cx=\"42\" cy=\"62\" r=\"3\" fill=\"#477fe0\"/><circle cx=\"130\" cy=\"62\" r=\"3\" fill=\"#477fe0\"/><circle cx=\"218\" cy=\"62\" r=\"3\" fill=\"#477fe0\"/><text x=\"42\" y=\"84\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">A</text><text x=\"130\" y=\"84\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">B</text><text x=\"218\" y=\"84\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">C</text><path d=\"M86 55V69 M174 55V69\" fill=\"none\" stroke=\"#477fe0\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>"
+    },
+    {
+      "termID": "zach-u3-segment-addition",
+      "termFormat": "rich",
+      "term": "<p>What is the Segment Addition Postulate?</p>",
+      "definitionFormat": "rich",
+      "definition": "<p>If B is between A and C, then the lengths of the two parts add to the whole: <math aria-label=\"AB+BC=AC\"><mrow><mi>A</mi><mi>B</mi><mo>+</mo><mi>B</mi><mi>C</mi><mo>=</mo><mi>A</mi><mi>C</mi></mrow></math>.</p><svg viewBox=\"0 0 260 132\" width=\"260\" height=\"132\" role=\"img\" aria-label=\"Segment AC with B between A and C.\"><rect x=\"1\" y=\"1\" width=\"258\" height=\"130\" rx=\"12\" fill=\"#477fe0\" fill-opacity=\".08\"/><path d=\"M42 62H218\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><circle cx=\"42\" cy=\"62\" r=\"3\" fill=\"#477fe0\"/><circle cx=\"111\" cy=\"62\" r=\"3\" fill=\"#477fe0\"/><circle cx=\"218\" cy=\"62\" r=\"3\" fill=\"#477fe0\"/><text x=\"42\" y=\"84\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">A</text><text x=\"111\" y=\"84\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">B</text><text x=\"218\" y=\"84\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">C</text></svg>"
+    },
+    {
+      "termID": "zach-u3-midpoint",
+      "termFormat": "rich",
+      "term": "<p>What is a midpoint?</p>",
+      "definitionFormat": "rich",
+      "definition": "<p>The midpoint lies on the segment and divides it into two congruent segments. If B is the midpoint of segment AC, then <math aria-label=\"AB=BC\"><mrow><mi>A</mi><mi>B</mi><mo>=</mo><mi>B</mi><mi>C</mi></mrow></math>. A point between A and C with equal distances to both endpoints is the midpoint.</p><svg viewBox=\"0 0 260 132\" width=\"260\" height=\"132\" role=\"img\" aria-label=\"Segment AC with midpoint B. Matching tick marks show equal halves.\"><rect x=\"1\" y=\"1\" width=\"258\" height=\"130\" rx=\"12\" fill=\"#477fe0\" fill-opacity=\".08\"/><path d=\"M42 62H218\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><circle cx=\"42\" cy=\"62\" r=\"3\" fill=\"#477fe0\"/><circle cx=\"130\" cy=\"62\" r=\"3\" fill=\"#477fe0\"/><circle cx=\"218\" cy=\"62\" r=\"3\" fill=\"#477fe0\"/><text x=\"42\" y=\"84\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">A</text><text x=\"130\" y=\"84\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">B</text><text x=\"218\" y=\"84\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">C</text><path d=\"M86 55V69 M174 55V69\" fill=\"none\" stroke=\"#477fe0\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>"
+    },
+    {
+      "termID": "zach-u3-segment-bisector",
+      "termFormat": "rich",
+      "term": "<p>What is a segment bisector?</p>",
+      "definitionFormat": "rich",
+      "definition": "<p>A segment bisector intersects a segment at its midpoint. It divides the segment into two congruent parts.</p>"
+    },
+    {
+      "termID": "zach-u3-midpoint-proof",
+      "termFormat": "rich",
+      "term": "<p>How do you prove that one half of a bisected segment is half its total length?</p>",
+      "definitionFormat": "rich",
+      "definition": "<p>Use midpoint to get <math aria-label=\"AB=BC\"><mrow><mi>A</mi><mi>B</mi><mo>=</mo><mi>B</mi><mi>C</mi></mrow></math>. Segment Addition gives <math aria-label=\"AB+BC=AC\"><mrow><mi>A</mi><mi>B</mi><mo>+</mo><mi>B</mi><mi>C</mi><mo>=</mo><mi>A</mi><mi>C</mi></mrow></math>. Substitute equal lengths to get <math aria-label=\"2AB=AC\"><mrow><mn>2</mn><mi>A</mi><mi>B</mi><mo>=</mo><mi>A</mi><mi>C</mi></mrow></math>, then divide by 2.</p><svg viewBox=\"0 0 260 132\" width=\"260\" height=\"132\" role=\"img\" aria-label=\"Segment AC with midpoint B. Matching tick marks show equal halves.\"><rect x=\"1\" y=\"1\" width=\"258\" height=\"130\" rx=\"12\" fill=\"#477fe0\" fill-opacity=\".08\"/><path d=\"M42 62H218\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><circle cx=\"42\" cy=\"62\" r=\"3\" fill=\"#477fe0\"/><circle cx=\"130\" cy=\"62\" r=\"3\" fill=\"#477fe0\"/><circle cx=\"218\" cy=\"62\" r=\"3\" fill=\"#477fe0\"/><text x=\"42\" y=\"84\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">A</text><text x=\"130\" y=\"84\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">B</text><text x=\"218\" y=\"84\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">C</text><path d=\"M86 55V69 M174 55V69\" fill=\"none\" stroke=\"#477fe0\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>"
+    },
+    {
+      "termID": "zach-u3-adjacent",
+      "termFormat": "rich",
+      "term": "<p>What are adjacent angles?</p>",
+      "definitionFormat": "rich",
+      "definition": "<p>They share a vertex and a side, and their interiors do not overlap.</p><svg viewBox=\"0 0 260 132\" width=\"260\" height=\"132\" role=\"img\" aria-label=\"A ray inside an angle divides it into adjacent angles 1 and 2.\"><rect x=\"1\" y=\"1\" width=\"258\" height=\"130\" rx=\"12\" fill=\"#477fe0\" fill-opacity=\".08\"/><path d=\"M209 99H88L58 29\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M88 99L144 29\" fill=\"none\" stroke=\"#477fe0\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><text x=\"128\" y=\"87\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">1</text><text x=\"98\" y=\"60\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">2</text></svg>"
+    },
+    {
+      "termID": "zach-u3-angle-congruence",
+      "termFormat": "rich",
+      "term": "<p>What does it mean for angles to be congruent?</p>",
+      "definitionFormat": "rich",
+      "definition": "<p>Angles are congruent exactly when their measures are equal. <math aria-label=\"∠1≅∠3\"><mrow><mo>∠</mo><mn>1</mn><mo>≅</mo><mo>∠</mo><mn>3</mn></mrow></math> is equivalent to <math aria-label=\"m∠1=m∠3\"><mrow><mi>m</mi><mo>∠</mo><mn>1</mn><mo>=</mo><mi>m</mi><mo>∠</mo><mn>3</mn></mrow></math>.</p><svg viewBox=\"0 0 260 132\" width=\"260\" height=\"132\" role=\"img\" aria-label=\"Two intersecting lines. Opposite angles 1 and 3 are vertical angles.\"><rect x=\"1\" y=\"1\" width=\"258\" height=\"130\" rx=\"12\" fill=\"#477fe0\" fill-opacity=\".08\"/><path d=\"M44 25L216 107 M44 107L216 25\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><text x=\"130\" y=\"48\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">1</text><text x=\"174\" y=\"70\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">2</text><text x=\"130\" y=\"95\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">3</text><text x=\"86\" y=\"70\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">4</text></svg>"
+    },
+    {
+      "termID": "zach-u3-angle-addition",
+      "termFormat": "rich",
+      "term": "<p>What is the Angle Addition Postulate?</p>",
+      "definitionFormat": "rich",
+      "definition": "<p>A ray through the interior of an angle divides it into two angles whose measures add to the whole. Here, <math aria-label=\"m∠1+m∠2\"><mrow><mi>m</mi><mo>∠</mo><mn>1</mn><mo>+</mo><mi>m</mi><mo>∠</mo><mn>2</mn></mrow></math> equals the measure of the entire angle.</p><svg viewBox=\"0 0 260 132\" width=\"260\" height=\"132\" role=\"img\" aria-label=\"A ray inside an angle divides it into adjacent angles 1 and 2.\"><rect x=\"1\" y=\"1\" width=\"258\" height=\"130\" rx=\"12\" fill=\"#477fe0\" fill-opacity=\".08\"/><path d=\"M209 99H88L58 29\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M88 99L144 29\" fill=\"none\" stroke=\"#477fe0\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><text x=\"128\" y=\"87\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">1</text><text x=\"98\" y=\"60\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">2</text></svg>"
+    },
+    {
+      "termID": "zach-u3-angle-bisector",
+      "termFormat": "rich",
+      "term": "<p>What is an angle bisector?</p>",
+      "definitionFormat": "rich",
+      "definition": "<p>A ray that divides an angle into two congruent angles. Here, <math aria-label=\"∠1≅∠2\"><mrow><mo>∠</mo><mn>1</mn><mo>≅</mo><mo>∠</mo><mn>2</mn></mrow></math>, so <math aria-label=\"m∠1=m∠2\"><mrow><mi>m</mi><mo>∠</mo><mn>1</mn><mo>=</mo><mi>m</mi><mo>∠</mo><mn>2</mn></mrow></math>.</p><svg viewBox=\"0 0 260 132\" width=\"260\" height=\"132\" role=\"img\" aria-label=\"A right angle divided into two congruent angles.\"><rect x=\"1\" y=\"1\" width=\"258\" height=\"130\" rx=\"12\" fill=\"#477fe0\" fill-opacity=\".08\"/><path d=\"M209 99H88L88 25\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M88 99L151 36\" fill=\"none\" stroke=\"#477fe0\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M88 87H100V99\" fill=\"none\" stroke=\"#c16b23\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><text x=\"128\" y=\"87\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">1</text><text x=\"98\" y=\"60\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">2</text><path d=\"M116 99A28 28 0 0 0 108 79A28 28 0 0 0 88 71\" fill=\"none\" stroke=\"#c16b23\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>"
+    },
+    {
+      "termID": "zach-u3-right-angle",
+      "termFormat": "rich",
+      "term": "<p>What is a right angle?</p>",
+      "definitionFormat": "rich",
+      "definition": "<p>An angle measuring <math aria-label=\"90°\"><mrow><mn>90</mn><mo>°</mo></mrow></math>. A small square marks a right angle in a diagram.</p><svg viewBox=\"0 0 260 132\" width=\"260\" height=\"132\" role=\"img\" aria-label=\"A right angle split into adjacent angles 1 and 2.\"><rect x=\"1\" y=\"1\" width=\"258\" height=\"130\" rx=\"12\" fill=\"#477fe0\" fill-opacity=\".08\"/><path d=\"M209 99H88L88 25\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M88 99L144 29\" fill=\"none\" stroke=\"#477fe0\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M88 87H100V99\" fill=\"none\" stroke=\"#c16b23\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><text x=\"128\" y=\"87\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">1</text><text x=\"98\" y=\"60\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">2</text></svg>"
+    },
+    {
+      "termID": "zach-u3-perpendicular",
+      "termFormat": "rich",
+      "term": "<p>What does it mean for two lines to be perpendicular?</p>",
+      "definitionFormat": "rich",
+      "definition": "<p>They intersect to form right angles. The symbol <math aria-label=\"⊥\"><mrow><mo>⊥</mo></mrow></math> means “is perpendicular to.”</p><svg viewBox=\"0 0 260 132\" width=\"260\" height=\"132\" role=\"img\" aria-label=\"Two intersecting lines with a right-angle square.\"><rect x=\"1\" y=\"1\" width=\"258\" height=\"130\" rx=\"12\" fill=\"#477fe0\" fill-opacity=\".08\"/><path d=\"M28 69H232 M130 18V116\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M130 55H144V69\" fill=\"none\" stroke=\"#477fe0\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>"
+    },
+    {
+      "termID": "zach-u3-complementary",
+      "termFormat": "rich",
+      "term": "<p>What are complementary angles?</p>",
+      "definitionFormat": "rich",
+      "definition": "<p>Two angles whose measures add to <math aria-label=\"90°\"><mrow><mn>90</mn><mo>°</mo></mrow></math>. They can be adjacent or separate.</p><svg viewBox=\"0 0 260 132\" width=\"260\" height=\"132\" role=\"img\" aria-label=\"A right angle split into adjacent angles 1 and 2.\"><rect x=\"1\" y=\"1\" width=\"258\" height=\"130\" rx=\"12\" fill=\"#477fe0\" fill-opacity=\".08\"/><path d=\"M209 99H88L88 25\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M88 99L144 29\" fill=\"none\" stroke=\"#477fe0\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M88 87H100V99\" fill=\"none\" stroke=\"#c16b23\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><text x=\"128\" y=\"87\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">1</text><text x=\"98\" y=\"60\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">2</text></svg>"
+    },
+    {
+      "termID": "zach-u3-supplementary",
+      "termFormat": "rich",
+      "term": "<p>What are supplementary angles?</p>",
+      "definitionFormat": "rich",
+      "definition": "<p>Two angles whose measures add to <math aria-label=\"180°\"><mrow><mn>180</mn><mo>°</mo></mrow></math>. They can be adjacent or separate.</p><svg viewBox=\"0 0 260 132\" width=\"260\" height=\"132\" role=\"img\" aria-label=\"A straight line split into adjacent angles 1 and 2.\"><rect x=\"1\" y=\"1\" width=\"258\" height=\"130\" rx=\"12\" fill=\"#477fe0\" fill-opacity=\".08\"/><path d=\"M209 99H88L28 99\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M88 99L144 29\" fill=\"none\" stroke=\"#477fe0\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><text x=\"128\" y=\"87\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">1</text><text x=\"63\" y=\"84\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">2</text></svg>"
+    },
+    {
+      "termID": "zach-u3-linear-pair",
+      "termFormat": "rich",
+      "term": "<p>What is a linear pair?</p>",
+      "definitionFormat": "rich",
+      "definition": "<p>Two adjacent angles whose nonshared sides are opposite rays. Their outside sides form a straight line.</p><svg viewBox=\"0 0 260 132\" width=\"260\" height=\"132\" role=\"img\" aria-label=\"A straight line split into adjacent angles 1 and 2.\"><rect x=\"1\" y=\"1\" width=\"258\" height=\"130\" rx=\"12\" fill=\"#477fe0\" fill-opacity=\".08\"/><path d=\"M209 99H88L28 99\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M88 99L144 29\" fill=\"none\" stroke=\"#477fe0\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><text x=\"128\" y=\"87\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">1</text><text x=\"63\" y=\"84\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">2</text></svg>"
+    },
+    {
+      "termID": "zach-u3-linear-pair-postulate",
+      "termFormat": "rich",
+      "term": "<p>What does the Linear Pair Postulate say?</p>",
+      "definitionFormat": "rich",
+      "definition": "<p>If two angles form a linear pair, they are supplementary. The Unit 2 reference also calls this the <strong>Supplement Theorem</strong>. The definition of supplementary angles gives <math aria-label=\"m∠1+m∠2=180°\"><mrow><mi>m</mi><mo>∠</mo><mn>1</mn><mo>+</mo><mi>m</mi><mo>∠</mo><mn>2</mn><mo>=</mo><mn>180</mn><mo>°</mo></mrow></math>.</p><svg viewBox=\"0 0 260 132\" width=\"260\" height=\"132\" role=\"img\" aria-label=\"A straight line split into adjacent angles 1 and 2.\"><rect x=\"1\" y=\"1\" width=\"258\" height=\"130\" rx=\"12\" fill=\"#477fe0\" fill-opacity=\".08\"/><path d=\"M209 99H88L28 99\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M88 99L144 29\" fill=\"none\" stroke=\"#477fe0\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><text x=\"128\" y=\"87\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">1</text><text x=\"63\" y=\"84\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">2</text></svg>"
+    },
+    {
+      "termID": "zach-u3-vertical-angles",
+      "termFormat": "rich",
+      "term": "<p>What are vertical angles?</p>",
+      "definitionFormat": "rich",
+      "definition": "<p>Opposite angles formed by two intersecting lines. In the diagram, ∠1 and ∠3 form a vertical pair.</p><svg viewBox=\"0 0 260 132\" width=\"260\" height=\"132\" role=\"img\" aria-label=\"Two intersecting lines. Opposite angles 1 and 3 are vertical angles.\"><rect x=\"1\" y=\"1\" width=\"258\" height=\"130\" rx=\"12\" fill=\"#477fe0\" fill-opacity=\".08\"/><path d=\"M44 25L216 107 M44 107L216 25\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><text x=\"130\" y=\"48\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">1</text><text x=\"174\" y=\"70\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">2</text><text x=\"130\" y=\"95\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">3</text><text x=\"86\" y=\"70\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">4</text></svg>"
+    },
+    {
+      "termID": "zach-u3-vertical-theorem",
+      "termFormat": "rich",
+      "term": "<p>What is the Vertical Angles Theorem?</p>",
+      "definitionFormat": "rich",
+      "definition": "<p>If two angles are vertical angles, then they are congruent. Here, <math aria-label=\"∠1≅∠3\"><mrow><mo>∠</mo><mn>1</mn><mo>≅</mo><mo>∠</mo><mn>3</mn></mrow></math> and <math aria-label=\"∠2≅∠4\"><mrow><mo>∠</mo><mn>2</mn><mo>≅</mo><mo>∠</mo><mn>4</mn></mrow></math>.</p><svg viewBox=\"0 0 260 132\" width=\"260\" height=\"132\" role=\"img\" aria-label=\"Two intersecting lines. Opposite angles 1 and 3 are vertical angles.\"><rect x=\"1\" y=\"1\" width=\"258\" height=\"130\" rx=\"12\" fill=\"#477fe0\" fill-opacity=\".08\"/><path d=\"M44 25L216 107 M44 107L216 25\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><text x=\"130\" y=\"48\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">1</text><text x=\"174\" y=\"70\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">2</text><text x=\"130\" y=\"95\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">3</text><text x=\"86\" y=\"70\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">4</text></svg>"
+    },
+    {
+      "termID": "zach-u3-complement-theorem",
+      "termFormat": "rich",
+      "term": "<p>What is the Complement Theorem?</p>",
+      "definitionFormat": "rich",
+      "definition": "<p>If two adjacent angles together form a right angle, they are complementary.</p><svg viewBox=\"0 0 260 132\" width=\"260\" height=\"132\" role=\"img\" aria-label=\"A right angle split into adjacent angles 1 and 2.\"><rect x=\"1\" y=\"1\" width=\"258\" height=\"130\" rx=\"12\" fill=\"#477fe0\" fill-opacity=\".08\"/><path d=\"M209 99H88L88 25\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M88 99L144 29\" fill=\"none\" stroke=\"#477fe0\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M88 87H100V99\" fill=\"none\" stroke=\"#c16b23\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><text x=\"128\" y=\"87\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">1</text><text x=\"98\" y=\"60\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">2</text></svg>"
+    },
+    {
+      "termID": "zach-u3-congruent-complements",
+      "termFormat": "rich",
+      "term": "<p>What is the Congruent Complements Theorem?</p>",
+      "definitionFormat": "rich",
+      "definition": "<p>Two angles complementary to the same angle are congruent. Both have measures equal to 90° minus the measure of the shared complement.</p>"
+    },
+    {
+      "termID": "zach-u3-congruent-supplements",
+      "termFormat": "rich",
+      "term": "<p>What is the Congruent Supplements Theorem?</p>",
+      "definitionFormat": "rich",
+      "definition": "<p>Two angles supplementary to the same angle are congruent. Both have measures equal to 180° minus the measure of the shared supplement.</p>"
+    },
+    {
+      "termID": "zach-u3-right-angle-congruence",
+      "termFormat": "rich",
+      "term": "<p>What can you conclude about any two right angles?</p>",
+      "definitionFormat": "rich",
+      "definition": "<p>They are congruent because each measures <math aria-label=\"90°\"><mrow><mn>90</mn><mo>°</mo></mrow></math>.</p>"
+    },
+    {
+      "termID": "zach-u3-congruent-supplementary-right",
+      "termFormat": "rich",
+      "term": "<p>What can you conclude if two angles are congruent and supplementary?</p>",
+      "definitionFormat": "rich",
+      "definition": "<p>Both are right angles. Their equal measures add to 180°, so each measures 90°.</p><svg viewBox=\"0 0 260 132\" width=\"260\" height=\"132\" role=\"img\" aria-label=\"A straight line split into adjacent angles 1 and 2.\"><rect x=\"1\" y=\"1\" width=\"258\" height=\"130\" rx=\"12\" fill=\"#477fe0\" fill-opacity=\".08\"/><path d=\"M209 99H88L28 99\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M88 99L88 29\" fill=\"none\" stroke=\"#477fe0\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><text x=\"125\" y=\"85\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">1</text><text x=\"62\" y=\"85\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">2</text></svg>"
+    },
+    {
+      "termID": "zach-u3-parallel-lines",
+      "termFormat": "rich",
+      "term": "<p>What are parallel lines?</p>",
+      "definitionFormat": "rich",
+      "definition": "<p>Distinct coplanar lines that never intersect. Matching arrow marks indicate parallel lines. Write <math aria-label=\"ℓ∥k\"><mrow><mi>ℓ</mi><mo>∥</mo><mi>k</mi></mrow></math>.</p><svg viewBox=\"0 0 260 132\" width=\"260\" height=\"132\" role=\"img\" aria-label=\"Two horizontal lines with matching arrow marks.\"><rect x=\"1\" y=\"1\" width=\"258\" height=\"130\" rx=\"12\" fill=\"#477fe0\" fill-opacity=\".08\"/><path d=\"M26 42H225 M26 91H225\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M60 37l7 5-7 5 M60 86l7 5-7 5\" fill=\"none\" stroke=\"#477fe0\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><text x=\"238\" y=\"46\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">ℓ</text><text x=\"238\" y=\"95\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">k</text></svg>"
+    },
+    {
+      "termID": "zach-u3-parallel-planes",
+      "termFormat": "rich",
+      "term": "<p>What are parallel planes?</p>",
+      "definitionFormat": "rich",
+      "definition": "<p>Distinct planes with no points in common. The diagram shows parallel planes J and K.</p><svg viewBox=\"0 0 260 132\" width=\"260\" height=\"132\" role=\"img\" aria-label=\"Two parallel planes labeled J and K.\"><rect x=\"1\" y=\"1\" width=\"258\" height=\"130\" rx=\"12\" fill=\"#477fe0\" fill-opacity=\".08\"/><polygon points=\"36,48 168,48 224,20 92,20\" fill=\"#477fe0\" fill-opacity=\".22\" stroke=\"#477fe0\"/><polygon points=\"36,106 168,106 224,78 92,78\" fill=\"#c16b23\" fill-opacity=\".22\" stroke=\"#c16b23\"/><text x=\"158\" y=\"39\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">J</text><text x=\"158\" y=\"97\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">K</text></svg>"
+    },
+    {
+      "termID": "zach-u3-skew-lines",
+      "termFormat": "rich",
+      "term": "<p>What are skew lines?</p>",
+      "definitionFormat": "rich",
+      "definition": "<p>Noncoplanar lines that do not intersect and are not parallel. The colored edges lie on skew lines.</p><svg viewBox=\"0 0 260 138\" width=\"260\" height=\"138\" role=\"img\" aria-label=\"Rectangular prism with blue edge AB at the top front and orange edge CD at the back right. Their supporting lines are skew.\"><rect x=\"1\" y=\"1\" width=\"258\" height=\"136\" rx=\"12\" fill=\"#477fe0\" fill-opacity=\".07\" stroke=\"#477fe0\" stroke-opacity=\".3\"/><path d=\"M43 53H151V116H43Z M151 53L206 25V88L151 116 M43 53L98 25H206\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M98 25V88H206 M98 88L43 116\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-dasharray=\"4 4\" opacity=\".45\"/><path d=\"M43 53H151\" fill=\"none\" stroke=\"#477fe0\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M206 25V88\" fill=\"none\" stroke=\"#c16b23\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><circle cx=\"43\" cy=\"53\" r=\"3.5\" fill=\"#477fe0\"/><text x=\"31\" y=\"50\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"600\" fill=\"currentColor\">A</text><circle cx=\"151\" cy=\"53\" r=\"3.5\" fill=\"#477fe0\"/><text x=\"151\" y=\"43\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"600\" fill=\"currentColor\">B</text><circle cx=\"206\" cy=\"25\" r=\"3.5\" fill=\"#c16b23\"/><text x=\"219\" y=\"25\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"600\" fill=\"currentColor\">C</text><circle cx=\"206\" cy=\"88\" r=\"3.5\" fill=\"#c16b23\"/><text x=\"219\" y=\"94\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"600\" fill=\"currentColor\">D</text></svg>"
+    },
+    {
+      "termID": "zach-u3-transversal",
+      "termFormat": "rich",
+      "term": "<p>What is a transversal?</p>",
+      "definitionFormat": "rich",
+      "definition": "<p>A line that intersects two or more coplanar lines at distinct points. Identify angle pairs using the same transversal.</p><svg viewBox=\"0 0 260 132\" width=\"260\" height=\"132\" role=\"img\" aria-label=\"The visible portions of nonparallel lines ℓ and k do not meet in the diagram. Transversal t crosses them at two marked points.\"><rect x=\"1\" y=\"1\" width=\"258\" height=\"130\" rx=\"12\" fill=\"#477fe0\" fill-opacity=\".07\" stroke=\"#477fe0\" stroke-opacity=\".3\"/><path d=\"M22 35H231 M22 102L231 63\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\"/><path d=\"M89 10L145 122\" fill=\"none\" stroke=\"#477fe0\" stroke-width=\"3\" stroke-linecap=\"round\"/><circle cx=\"101.5\" cy=\"35\" r=\"3.4\" fill=\"#477fe0\"/><circle cx=\"125.36\" cy=\"82.71\" r=\"3.4\" fill=\"#477fe0\"/><text x=\"239\" y=\"39\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"19\" font-weight=\"600\">ℓ</text><text x=\"240\" y=\"66\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"19\" font-weight=\"600\">𝓀</text><text x=\"158\" y=\"119\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"19\" font-weight=\"600\">𝓉</text></svg>"
+    },
+    {
+      "termID": "zach-u3-interior-exterior",
+      "termFormat": "rich",
+      "term": "<p>What are interior and exterior angles formed by a transversal?</p>",
+      "definitionFormat": "rich",
+      "definition": "<p>Interior angles lie between the two crossed lines. Exterior angles lie outside them. Here ∠3, ∠4, ∠5, and ∠6 are interior. The other four are exterior.</p><svg viewBox=\"0 0 260 132\" width=\"260\" height=\"132\" role=\"img\" aria-label=\"Lines ℓ and k cut by a transversal. Highlighted angles 3 and 4 and 5 and 6.\"><rect x=\"1\" y=\"1\" width=\"258\" height=\"130\" rx=\"12\" fill=\"#477fe0\" fill-opacity=\".08\"/><path d=\"M26 42H225 M26 91H225\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M93 11L167 121\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><text x=\"238\" y=\"46\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">ℓ</text><text x=\"238\" y=\"95\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">k</text><text x=\"176\" y=\"122\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">t</text><text x=\"90\" y=\"33\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">1</text><text x=\"126\" y=\"33\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">2</text><circle cx=\"104\" cy=\"56\" r=\"10\" fill=\"#477fe0\" fill-opacity=\".3\"/><text x=\"104\" y=\"60\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">3</text><circle cx=\"143\" cy=\"56\" r=\"10\" fill=\"#477fe0\" fill-opacity=\".3\"/><text x=\"143\" y=\"60\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">4</text><circle cx=\"126\" cy=\"78\" r=\"10\" fill=\"#477fe0\" fill-opacity=\".3\"/><text x=\"126\" y=\"82\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">5</text><circle cx=\"160\" cy=\"78\" r=\"10\" fill=\"#477fe0\" fill-opacity=\".3\"/><text x=\"160\" y=\"82\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">6</text><text x=\"139\" y=\"111\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">7</text><text x=\"177\" y=\"111\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">8</text></svg>"
+    },
+    {
+      "termID": "zach-u3-define-corresponding",
+      "termFormat": "rich",
+      "term": "<p>What are corresponding angles?</p>",
+      "definitionFormat": "rich",
+      "definition": "<p>They are formed by a transversal at two intersections and are in the same relative position at the two intersections.</p><p>Example: ∠1 and ∠5.</p><svg viewBox=\"0 0 260 132\" width=\"260\" height=\"132\" role=\"img\" aria-label=\"Lines ℓ and k cut by a transversal. Highlighted angles 1 and 5.\"><rect x=\"1\" y=\"1\" width=\"258\" height=\"130\" rx=\"12\" fill=\"#477fe0\" fill-opacity=\".08\"/><path d=\"M26 42H225 M26 91H225\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M93 11L167 121\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><text x=\"238\" y=\"46\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">ℓ</text><text x=\"238\" y=\"95\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">k</text><text x=\"176\" y=\"122\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">t</text><circle cx=\"90\" cy=\"29\" r=\"10\" fill=\"#477fe0\" fill-opacity=\".3\"/><text x=\"90\" y=\"33\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">1</text><text x=\"126\" y=\"33\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">2</text><text x=\"104\" y=\"60\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">3</text><text x=\"143\" y=\"60\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">4</text><circle cx=\"126\" cy=\"78\" r=\"10\" fill=\"#477fe0\" fill-opacity=\".3\"/><text x=\"126\" y=\"82\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">5</text><text x=\"160\" y=\"82\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">6</text><text x=\"139\" y=\"111\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">7</text><text x=\"177\" y=\"111\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">8</text></svg>"
+    },
+    {
+      "termID": "zach-u3-theorem-corresponding",
+      "termFormat": "rich",
+      "term": "<p>What does the Corresponding Angles Theorem say?</p>",
+      "definitionFormat": "rich",
+      "definition": "<p>If a transversal crosses two parallel lines, corresponding angles are congruent.</p><p><math aria-label=\"∠1≅∠5\"><mrow><mo>∠</mo><mn>1</mn><mo>≅</mo><mo>∠</mo><mn>5</mn></mrow></math>.</p><svg viewBox=\"0 0 260 132\" width=\"260\" height=\"132\" role=\"img\" aria-label=\"Lines ℓ and k cut by a transversal. The lines are marked parallel. Highlighted angles 1 and 5.\"><rect x=\"1\" y=\"1\" width=\"258\" height=\"130\" rx=\"12\" fill=\"#477fe0\" fill-opacity=\".08\"/><path d=\"M26 42H225 M26 91H225\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M60 37l7 5-7 5 M60 86l7 5-7 5\" fill=\"none\" stroke=\"#477fe0\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M93 11L167 121\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><text x=\"238\" y=\"46\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">ℓ</text><text x=\"238\" y=\"95\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">k</text><text x=\"176\" y=\"122\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">t</text><circle cx=\"90\" cy=\"29\" r=\"10\" fill=\"#477fe0\" fill-opacity=\".3\"/><text x=\"90\" y=\"33\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">1</text><text x=\"126\" y=\"33\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">2</text><text x=\"104\" y=\"60\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">3</text><text x=\"143\" y=\"60\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">4</text><circle cx=\"126\" cy=\"78\" r=\"10\" fill=\"#477fe0\" fill-opacity=\".3\"/><text x=\"126\" y=\"82\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">5</text><text x=\"160\" y=\"82\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">6</text><text x=\"139\" y=\"111\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">7</text><text x=\"177\" y=\"111\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">8</text></svg>"
+    },
+    {
+      "termID": "zach-u3-converse-corresponding",
+      "termFormat": "rich",
+      "term": "<p>What is the converse of the Corresponding Angles Theorem?</p>",
+      "definitionFormat": "rich",
+      "definition": "<p>If a transversal crosses two lines and forms corresponding angles that are congruent, then the two lines are parallel.</p><svg viewBox=\"0 0 260 132\" width=\"260\" height=\"132\" role=\"img\" aria-label=\"Lines ℓ and k cut by a transversal. Highlighted angles 1 and 5.\"><rect x=\"1\" y=\"1\" width=\"258\" height=\"130\" rx=\"12\" fill=\"#477fe0\" fill-opacity=\".08\"/><path d=\"M26 42H225 M26 91H225\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M93 11L167 121\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><text x=\"238\" y=\"46\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">ℓ</text><text x=\"238\" y=\"95\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">k</text><text x=\"176\" y=\"122\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">t</text><circle cx=\"90\" cy=\"29\" r=\"10\" fill=\"#477fe0\" fill-opacity=\".3\"/><text x=\"90\" y=\"33\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">1</text><text x=\"126\" y=\"33\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">2</text><text x=\"104\" y=\"60\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">3</text><text x=\"143\" y=\"60\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">4</text><circle cx=\"126\" cy=\"78\" r=\"10\" fill=\"#477fe0\" fill-opacity=\".3\"/><text x=\"126\" y=\"82\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">5</text><text x=\"160\" y=\"82\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">6</text><text x=\"139\" y=\"111\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">7</text><text x=\"177\" y=\"111\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">8</text></svg>"
+    },
+    {
+      "termID": "zach-u3-define-alternate-interior",
+      "termFormat": "rich",
+      "term": "<p>What are alternate interior angles?</p>",
+      "definitionFormat": "rich",
+      "definition": "<p>They are formed by a transversal at two intersections and are between the lines and on opposite sides of the transversal.</p><p>Example: ∠3 and ∠6.</p><svg viewBox=\"0 0 260 132\" width=\"260\" height=\"132\" role=\"img\" aria-label=\"Lines ℓ and k cut by a transversal. Highlighted angles 3 and 6.\"><rect x=\"1\" y=\"1\" width=\"258\" height=\"130\" rx=\"12\" fill=\"#477fe0\" fill-opacity=\".08\"/><path d=\"M26 42H225 M26 91H225\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M93 11L167 121\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><text x=\"238\" y=\"46\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">ℓ</text><text x=\"238\" y=\"95\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">k</text><text x=\"176\" y=\"122\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">t</text><text x=\"90\" y=\"33\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">1</text><text x=\"126\" y=\"33\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">2</text><circle cx=\"104\" cy=\"56\" r=\"10\" fill=\"#477fe0\" fill-opacity=\".3\"/><text x=\"104\" y=\"60\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">3</text><text x=\"143\" y=\"60\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">4</text><text x=\"126\" y=\"82\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">5</text><circle cx=\"160\" cy=\"78\" r=\"10\" fill=\"#477fe0\" fill-opacity=\".3\"/><text x=\"160\" y=\"82\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">6</text><text x=\"139\" y=\"111\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">7</text><text x=\"177\" y=\"111\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">8</text></svg>"
+    },
+    {
+      "termID": "zach-u3-theorem-alternate-interior",
+      "termFormat": "rich",
+      "term": "<p>What does the Alternate Interior Angles Theorem say?</p>",
+      "definitionFormat": "rich",
+      "definition": "<p>If a transversal crosses two parallel lines, alternate interior angles are congruent.</p><p><math aria-label=\"∠3≅∠6\"><mrow><mo>∠</mo><mn>3</mn><mo>≅</mo><mo>∠</mo><mn>6</mn></mrow></math>.</p><svg viewBox=\"0 0 260 132\" width=\"260\" height=\"132\" role=\"img\" aria-label=\"Lines ℓ and k cut by a transversal. The lines are marked parallel. Highlighted angles 3 and 6.\"><rect x=\"1\" y=\"1\" width=\"258\" height=\"130\" rx=\"12\" fill=\"#477fe0\" fill-opacity=\".08\"/><path d=\"M26 42H225 M26 91H225\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M60 37l7 5-7 5 M60 86l7 5-7 5\" fill=\"none\" stroke=\"#477fe0\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M93 11L167 121\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><text x=\"238\" y=\"46\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">ℓ</text><text x=\"238\" y=\"95\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">k</text><text x=\"176\" y=\"122\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">t</text><text x=\"90\" y=\"33\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">1</text><text x=\"126\" y=\"33\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">2</text><circle cx=\"104\" cy=\"56\" r=\"10\" fill=\"#477fe0\" fill-opacity=\".3\"/><text x=\"104\" y=\"60\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">3</text><text x=\"143\" y=\"60\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">4</text><text x=\"126\" y=\"82\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">5</text><circle cx=\"160\" cy=\"78\" r=\"10\" fill=\"#477fe0\" fill-opacity=\".3\"/><text x=\"160\" y=\"82\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">6</text><text x=\"139\" y=\"111\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">7</text><text x=\"177\" y=\"111\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">8</text></svg>"
+    },
+    {
+      "termID": "zach-u3-converse-alternate-interior",
+      "termFormat": "rich",
+      "term": "<p>What is the converse of the Alternate Interior Angles Theorem?</p>",
+      "definitionFormat": "rich",
+      "definition": "<p>If a transversal crosses two lines and forms alternate interior angles that are congruent, then the two lines are parallel.</p><svg viewBox=\"0 0 260 132\" width=\"260\" height=\"132\" role=\"img\" aria-label=\"Lines ℓ and k cut by a transversal. Highlighted angles 3 and 6.\"><rect x=\"1\" y=\"1\" width=\"258\" height=\"130\" rx=\"12\" fill=\"#477fe0\" fill-opacity=\".08\"/><path d=\"M26 42H225 M26 91H225\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M93 11L167 121\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><text x=\"238\" y=\"46\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">ℓ</text><text x=\"238\" y=\"95\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">k</text><text x=\"176\" y=\"122\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">t</text><text x=\"90\" y=\"33\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">1</text><text x=\"126\" y=\"33\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">2</text><circle cx=\"104\" cy=\"56\" r=\"10\" fill=\"#477fe0\" fill-opacity=\".3\"/><text x=\"104\" y=\"60\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">3</text><text x=\"143\" y=\"60\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">4</text><text x=\"126\" y=\"82\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">5</text><circle cx=\"160\" cy=\"78\" r=\"10\" fill=\"#477fe0\" fill-opacity=\".3\"/><text x=\"160\" y=\"82\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">6</text><text x=\"139\" y=\"111\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">7</text><text x=\"177\" y=\"111\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">8</text></svg>"
+    },
+    {
+      "termID": "zach-u3-define-alternate-exterior",
+      "termFormat": "rich",
+      "term": "<p>What are alternate exterior angles?</p>",
+      "definitionFormat": "rich",
+      "definition": "<p>They are formed by a transversal at two intersections and are outside the lines and on opposite sides of the transversal.</p><p>Example: ∠2 and ∠7.</p><svg viewBox=\"0 0 260 132\" width=\"260\" height=\"132\" role=\"img\" aria-label=\"Lines ℓ and k cut by a transversal. Highlighted angles 2 and 7.\"><rect x=\"1\" y=\"1\" width=\"258\" height=\"130\" rx=\"12\" fill=\"#477fe0\" fill-opacity=\".08\"/><path d=\"M26 42H225 M26 91H225\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M93 11L167 121\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><text x=\"238\" y=\"46\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">ℓ</text><text x=\"238\" y=\"95\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">k</text><text x=\"176\" y=\"122\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">t</text><text x=\"90\" y=\"33\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">1</text><circle cx=\"126\" cy=\"29\" r=\"10\" fill=\"#477fe0\" fill-opacity=\".3\"/><text x=\"126\" y=\"33\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">2</text><text x=\"104\" y=\"60\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">3</text><text x=\"143\" y=\"60\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">4</text><text x=\"126\" y=\"82\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">5</text><text x=\"160\" y=\"82\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">6</text><circle cx=\"139\" cy=\"107\" r=\"10\" fill=\"#477fe0\" fill-opacity=\".3\"/><text x=\"139\" y=\"111\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">7</text><text x=\"177\" y=\"111\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">8</text></svg>"
+    },
+    {
+      "termID": "zach-u3-theorem-alternate-exterior",
+      "termFormat": "rich",
+      "term": "<p>What does the Alternate Exterior Angles Theorem say?</p>",
+      "definitionFormat": "rich",
+      "definition": "<p>If a transversal crosses two parallel lines, alternate exterior angles are congruent.</p><p><math aria-label=\"∠2≅∠7\"><mrow><mo>∠</mo><mn>2</mn><mo>≅</mo><mo>∠</mo><mn>7</mn></mrow></math>.</p><svg viewBox=\"0 0 260 132\" width=\"260\" height=\"132\" role=\"img\" aria-label=\"Lines ℓ and k cut by a transversal. The lines are marked parallel. Highlighted angles 2 and 7.\"><rect x=\"1\" y=\"1\" width=\"258\" height=\"130\" rx=\"12\" fill=\"#477fe0\" fill-opacity=\".08\"/><path d=\"M26 42H225 M26 91H225\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M60 37l7 5-7 5 M60 86l7 5-7 5\" fill=\"none\" stroke=\"#477fe0\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M93 11L167 121\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><text x=\"238\" y=\"46\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">ℓ</text><text x=\"238\" y=\"95\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">k</text><text x=\"176\" y=\"122\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">t</text><text x=\"90\" y=\"33\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">1</text><circle cx=\"126\" cy=\"29\" r=\"10\" fill=\"#477fe0\" fill-opacity=\".3\"/><text x=\"126\" y=\"33\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">2</text><text x=\"104\" y=\"60\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">3</text><text x=\"143\" y=\"60\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">4</text><text x=\"126\" y=\"82\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">5</text><text x=\"160\" y=\"82\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">6</text><circle cx=\"139\" cy=\"107\" r=\"10\" fill=\"#477fe0\" fill-opacity=\".3\"/><text x=\"139\" y=\"111\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">7</text><text x=\"177\" y=\"111\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">8</text></svg>"
+    },
+    {
+      "termID": "zach-u3-converse-alternate-exterior",
+      "termFormat": "rich",
+      "term": "<p>What is the converse of the Alternate Exterior Angles Theorem?</p>",
+      "definitionFormat": "rich",
+      "definition": "<p>If a transversal crosses two lines and forms alternate exterior angles that are congruent, then the two lines are parallel.</p><svg viewBox=\"0 0 260 132\" width=\"260\" height=\"132\" role=\"img\" aria-label=\"Lines ℓ and k cut by a transversal. Highlighted angles 2 and 7.\"><rect x=\"1\" y=\"1\" width=\"258\" height=\"130\" rx=\"12\" fill=\"#477fe0\" fill-opacity=\".08\"/><path d=\"M26 42H225 M26 91H225\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M93 11L167 121\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><text x=\"238\" y=\"46\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">ℓ</text><text x=\"238\" y=\"95\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">k</text><text x=\"176\" y=\"122\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">t</text><text x=\"90\" y=\"33\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">1</text><circle cx=\"126\" cy=\"29\" r=\"10\" fill=\"#477fe0\" fill-opacity=\".3\"/><text x=\"126\" y=\"33\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">2</text><text x=\"104\" y=\"60\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">3</text><text x=\"143\" y=\"60\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">4</text><text x=\"126\" y=\"82\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">5</text><text x=\"160\" y=\"82\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">6</text><circle cx=\"139\" cy=\"107\" r=\"10\" fill=\"#477fe0\" fill-opacity=\".3\"/><text x=\"139\" y=\"111\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">7</text><text x=\"177\" y=\"111\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">8</text></svg>"
+    },
+    {
+      "termID": "zach-u3-define-consecutive-interior",
+      "termFormat": "rich",
+      "term": "<p>What are consecutive interior angles?</p>",
+      "definitionFormat": "rich",
+      "definition": "<p>They are formed by a transversal at two intersections and are between the lines and on the same side of the transversal.</p><p>Example: ∠3 and ∠5.</p><svg viewBox=\"0 0 260 132\" width=\"260\" height=\"132\" role=\"img\" aria-label=\"Lines ℓ and k cut by a transversal. Highlighted angles 3 and 5.\"><rect x=\"1\" y=\"1\" width=\"258\" height=\"130\" rx=\"12\" fill=\"#477fe0\" fill-opacity=\".08\"/><path d=\"M26 42H225 M26 91H225\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M93 11L167 121\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><text x=\"238\" y=\"46\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">ℓ</text><text x=\"238\" y=\"95\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">k</text><text x=\"176\" y=\"122\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">t</text><text x=\"90\" y=\"33\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">1</text><text x=\"126\" y=\"33\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">2</text><circle cx=\"104\" cy=\"56\" r=\"10\" fill=\"#477fe0\" fill-opacity=\".3\"/><text x=\"104\" y=\"60\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">3</text><text x=\"143\" y=\"60\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">4</text><circle cx=\"126\" cy=\"78\" r=\"10\" fill=\"#477fe0\" fill-opacity=\".3\"/><text x=\"126\" y=\"82\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">5</text><text x=\"160\" y=\"82\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">6</text><text x=\"139\" y=\"111\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">7</text><text x=\"177\" y=\"111\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">8</text></svg>"
+    },
+    {
+      "termID": "zach-u3-theorem-consecutive-interior",
+      "termFormat": "rich",
+      "term": "<p>What does the Consecutive Interior Angles Postulate say?</p>",
+      "definitionFormat": "rich",
+      "definition": "<p>If a transversal crosses two parallel lines, consecutive interior angles are supplementary.</p><p>By definition, <math aria-label=\"m∠3+m∠5=180°\"><mrow><mi>m</mi><mo>∠</mo><mn>3</mn><mo>+</mo><mi>m</mi><mo>∠</mo><mn>5</mn><mo>=</mo><mn>180</mn><mo>°</mo></mrow></math>.</p><svg viewBox=\"0 0 260 132\" width=\"260\" height=\"132\" role=\"img\" aria-label=\"Lines ℓ and k cut by a transversal. The lines are marked parallel. Highlighted angles 3 and 5.\"><rect x=\"1\" y=\"1\" width=\"258\" height=\"130\" rx=\"12\" fill=\"#477fe0\" fill-opacity=\".08\"/><path d=\"M26 42H225 M26 91H225\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M60 37l7 5-7 5 M60 86l7 5-7 5\" fill=\"none\" stroke=\"#477fe0\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M93 11L167 121\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><text x=\"238\" y=\"46\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">ℓ</text><text x=\"238\" y=\"95\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">k</text><text x=\"176\" y=\"122\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">t</text><text x=\"90\" y=\"33\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">1</text><text x=\"126\" y=\"33\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">2</text><circle cx=\"104\" cy=\"56\" r=\"10\" fill=\"#477fe0\" fill-opacity=\".3\"/><text x=\"104\" y=\"60\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">3</text><text x=\"143\" y=\"60\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">4</text><circle cx=\"126\" cy=\"78\" r=\"10\" fill=\"#477fe0\" fill-opacity=\".3\"/><text x=\"126\" y=\"82\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">5</text><text x=\"160\" y=\"82\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">6</text><text x=\"139\" y=\"111\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">7</text><text x=\"177\" y=\"111\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">8</text></svg>"
+    },
+    {
+      "termID": "zach-u3-converse-consecutive-interior",
+      "termFormat": "rich",
+      "term": "<p>What is the converse of the Consecutive Interior Angles Postulate?</p>",
+      "definitionFormat": "rich",
+      "definition": "<p>If a transversal crosses two lines and forms consecutive interior angles that are supplementary, then the two lines are parallel.</p><svg viewBox=\"0 0 260 132\" width=\"260\" height=\"132\" role=\"img\" aria-label=\"Lines ℓ and k cut by a transversal. Highlighted angles 3 and 5.\"><rect x=\"1\" y=\"1\" width=\"258\" height=\"130\" rx=\"12\" fill=\"#477fe0\" fill-opacity=\".08\"/><path d=\"M26 42H225 M26 91H225\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M93 11L167 121\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><text x=\"238\" y=\"46\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">ℓ</text><text x=\"238\" y=\"95\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">k</text><text x=\"176\" y=\"122\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">t</text><text x=\"90\" y=\"33\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">1</text><text x=\"126\" y=\"33\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">2</text><circle cx=\"104\" cy=\"56\" r=\"10\" fill=\"#477fe0\" fill-opacity=\".3\"/><text x=\"104\" y=\"60\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">3</text><text x=\"143\" y=\"60\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">4</text><circle cx=\"126\" cy=\"78\" r=\"10\" fill=\"#477fe0\" fill-opacity=\".3\"/><text x=\"126\" y=\"82\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">5</text><text x=\"160\" y=\"82\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">6</text><text x=\"139\" y=\"111\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">7</text><text x=\"177\" y=\"111\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">8</text></svg>"
+    },
+    {
+      "termID": "zach-u3-parallel-proof-direction",
+      "termFormat": "rich",
+      "term": "<p>How do you choose between a transversal theorem and its converse?</p>",
+      "definitionFormat": "rich",
+      "definition": "<p>Use the theorem or postulate when parallel lines are given and you need an angle relationship. Use its converse when the angle relationship is given and you need to prove the lines parallel.</p>"
+    },
+    {
+      "termID": "zach-u3-same-parallel-line",
+      "termFormat": "rich",
+      "term": "<p>What can you conclude if two distinct lines are parallel to the same line?</p>",
+      "definitionFormat": "rich",
+      "definition": "<p>They are parallel to each other. In the diagram, if <math aria-label=\"a∥c\"><mrow><mi>a</mi><mo>∥</mo><mi>c</mi></mrow></math> and <math aria-label=\"b∥c\"><mrow><mi>b</mi><mo>∥</mo><mi>c</mi></mrow></math>, then <math aria-label=\"a∥b\"><mrow><mi>a</mi><mo>∥</mo><mi>b</mi></mrow></math>.</p><svg viewBox=\"0 0 260 132\" width=\"260\" height=\"132\" role=\"img\" aria-label=\"Three horizontal lines labeled a, b, and c.\"><rect x=\"1\" y=\"1\" width=\"258\" height=\"130\" rx=\"12\" fill=\"#477fe0\" fill-opacity=\".08\"/><path d=\"M32 30H225 M32 64H225 M32 98H225\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M61 25l7 5-7 5 M61 59l7 5-7 5 M61 93l7 5-7 5\" fill=\"none\" stroke=\"#477fe0\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><text x=\"240\" y=\"34\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">a</text><text x=\"240\" y=\"68\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">b</text><text x=\"240\" y=\"102\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">c</text></svg>"
+    },
+    {
+      "termID": "zach-u3-same-perpendicular-line",
+      "termFormat": "rich",
+      "term": "<p>What can you conclude if two distinct coplanar lines are perpendicular to the same line?</p>",
+      "definitionFormat": "rich",
+      "definition": "<p>They are parallel to each other. The coplanar condition matters.</p><svg viewBox=\"0 0 260 132\" width=\"260\" height=\"132\" role=\"img\" aria-label=\"Two lines are perpendicular to the same vertical line.\"><rect x=\"1\" y=\"1\" width=\"258\" height=\"130\" rx=\"12\" fill=\"#477fe0\" fill-opacity=\".08\"/><path d=\"M26 42H225 M26 91H225\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M130 16V117\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M130 53H141V42 M130 102H141V91\" fill=\"none\" stroke=\"#477fe0\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><text x=\"238\" y=\"46\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">ℓ</text><text x=\"238\" y=\"95\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">k</text><text x=\"143\" y=\"23\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">t</text></svg>"
+    },
+    {
+      "termID": "zach-u3-perpendicular-transversal",
+      "termFormat": "rich",
+      "term": "<p>What is the Perpendicular Transversal Theorem?</p>",
+      "definitionFormat": "rich",
+      "definition": "<p>In a plane, a line perpendicular to one of two parallel lines is perpendicular to the other.</p><svg viewBox=\"0 0 260 132\" width=\"260\" height=\"132\" role=\"img\" aria-label=\"A vertical transversal forms a right angle with the upper of two marked parallel lines.\"><rect x=\"1\" y=\"1\" width=\"258\" height=\"130\" rx=\"12\" fill=\"#477fe0\" fill-opacity=\".08\"/><path d=\"M26 42H225 M26 91H225\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M60 37l7 5-7 5 M60 86l7 5-7 5\" fill=\"none\" stroke=\"#477fe0\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M130 16V117\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M130 53H141V42\" fill=\"none\" stroke=\"#477fe0\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><text x=\"238\" y=\"46\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">ℓ</text><text x=\"238\" y=\"95\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">k</text><text x=\"143\" y=\"23\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">t</text></svg>"
+    },
+    {
+      "termID": "zach-u3-triangle-sum",
+      "termFormat": "rich",
+      "term": "<p>What is the Triangle Angle Sum Theorem?</p>",
+      "definitionFormat": "rich",
+      "definition": "<p>The measures of the three interior angles of a triangle sum to <math aria-label=\"180°\"><mrow><mn>180</mn><mo>°</mo></mrow></math>. <math aria-label=\"m∠A+m∠B+m∠C=180°\"><mrow><mi>m</mi><mo>∠</mo><mi>A</mi><mo>+</mo><mi>m</mi><mo>∠</mo><mi>B</mi><mo>+</mo><mi>m</mi><mo>∠</mo><mi>C</mi><mo>=</mo><mn>180</mn><mo>°</mo></mrow></math>.</p><svg viewBox=\"0 0 260 132\" width=\"260\" height=\"132\" role=\"img\" aria-label=\"Triangle ABC with three labeled vertices.\"><rect x=\"1\" y=\"1\" width=\"258\" height=\"130\" rx=\"12\" fill=\"#477fe0\" fill-opacity=\".08\"/><path d=\"M41 97H155L92 28Z\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><text x=\"40\" y=\"115\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">A</text><text x=\"155\" y=\"115\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">B</text><text x=\"92\" y=\"21\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">C</text></svg>"
+    },
+    {
+      "termID": "zach-u3-triangle-exterior",
+      "termFormat": "rich",
+      "term": "<p>What is an exterior angle of a triangle?</p>",
+      "definitionFormat": "rich",
+      "definition": "<p>An angle formed by one side and the extension of an adjacent side. Ray BD extends AB, so ∠CBD is an exterior angle.</p><svg viewBox=\"0 0 260 132\" width=\"260\" height=\"132\" role=\"img\" aria-label=\"Triangle ABC with AB extended through B to D, making exterior angle CBD.\"><rect x=\"1\" y=\"1\" width=\"258\" height=\"130\" rx=\"12\" fill=\"#477fe0\" fill-opacity=\".08\"/><path d=\"M41 97H155L92 28Z\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M155 97H219\" fill=\"none\" stroke=\"#c16b23\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><text x=\"226\" y=\"114\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">D</text><path d=\"M174 97A19 19 0 0 0 142 83\" fill=\"none\" stroke=\"#c16b23\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><text x=\"40\" y=\"115\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">A</text><text x=\"155\" y=\"115\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">B</text><text x=\"92\" y=\"21\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">C</text></svg>"
+    },
+    {
+      "termID": "zach-u3-remote-interior",
+      "termFormat": "rich",
+      "term": "<p>What are the remote interior angles for an exterior angle of a triangle?</p>",
+      "definitionFormat": "rich",
+      "definition": "<p>They are the two interior angles at the other vertices. For exterior ∠CBD at B, the remote interior angles are ∠A and ∠C.</p><svg viewBox=\"0 0 260 132\" width=\"260\" height=\"132\" role=\"img\" aria-label=\"Triangle ABC with AB extended through B to D, making exterior angle CBD.\"><rect x=\"1\" y=\"1\" width=\"258\" height=\"130\" rx=\"12\" fill=\"#477fe0\" fill-opacity=\".08\"/><path d=\"M41 97H155L92 28Z\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M155 97H219\" fill=\"none\" stroke=\"#c16b23\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><text x=\"226\" y=\"114\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">D</text><path d=\"M174 97A19 19 0 0 0 142 83\" fill=\"none\" stroke=\"#c16b23\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><text x=\"40\" y=\"115\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">A</text><text x=\"155\" y=\"115\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">B</text><text x=\"92\" y=\"21\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">C</text></svg>"
+    },
+    {
+      "termID": "zach-u3-triangle-exterior-theorem",
+      "termFormat": "rich",
+      "term": "<p>What is the Triangle Exterior Angle Theorem?</p>",
+      "definitionFormat": "rich",
+      "definition": "<p>The measure of an exterior angle equals the sum of the measures of the two remote interior angles. Here, <math aria-label=\"m∠CBD=m∠A+m∠C\"><mrow><mi>m</mi><mo>∠</mo><mi>C</mi><mi>B</mi><mi>D</mi><mo>=</mo><mi>m</mi><mo>∠</mo><mi>A</mi><mo>+</mo><mi>m</mi><mo>∠</mo><mi>C</mi></mrow></math>.</p><svg viewBox=\"0 0 260 132\" width=\"260\" height=\"132\" role=\"img\" aria-label=\"Triangle ABC with AB extended through B to D, making exterior angle CBD.\"><rect x=\"1\" y=\"1\" width=\"258\" height=\"130\" rx=\"12\" fill=\"#477fe0\" fill-opacity=\".08\"/><path d=\"M41 97H155L92 28Z\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M155 97H219\" fill=\"none\" stroke=\"#c16b23\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><text x=\"226\" y=\"114\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">D</text><path d=\"M174 97A19 19 0 0 0 142 83\" fill=\"none\" stroke=\"#c16b23\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><text x=\"40\" y=\"115\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">A</text><text x=\"155\" y=\"115\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">B</text><text x=\"92\" y=\"21\" text-anchor=\"middle\" fill=\"currentColor\" font-size=\"13\" font-weight=\"600\">C</text></svg>"
+    }
+  ]
+}
